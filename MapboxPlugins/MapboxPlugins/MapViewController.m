@@ -1,10 +1,10 @@
-#import "DetailViewController.h"
+#import "MapViewController.h"
 
-@interface DetailViewController ()
+@interface MapViewController ()
 
 @end
 
-@implementation DetailViewController
+@implementation MapViewController
 
 - (void)configureView {
     // Update the user interface for the detail item.

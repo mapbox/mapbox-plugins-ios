@@ -10,7 +10,7 @@
 		DAF50B281ECA15B50044B316 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF50B271ECA15B50044B316 /* main.m */; };
 		DAF50B2B1ECA15B50044B316 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF50B2A1ECA15B50044B316 /* AppDelegate.m */; };
 		DAF50B2E1ECA15B50044B316 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF50B2D1ECA15B50044B316 /* MasterViewController.m */; };
-		DAF50B311ECA15B50044B316 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF50B301ECA15B50044B316 /* DetailViewController.m */; };
+		DAF50B311ECA15B50044B316 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF50B301ECA15B50044B316 /* MapViewController.m */; };
 		DAF50B341ECA15B50044B316 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF50B321ECA15B50044B316 /* Main.storyboard */; };
 		DAF50B361ECA15B50044B316 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAF50B351ECA15B50044B316 /* Assets.xcassets */; };
 		DAF50B391ECA15B50044B316 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF50B371ECA15B50044B316 /* LaunchScreen.storyboard */; };
@@ -23,8 +23,8 @@
 		DAF50B2A1ECA15B50044B316 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DAF50B2C1ECA15B50044B316 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		DAF50B2D1ECA15B50044B316 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		DAF50B2F1ECA15B50044B316 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		DAF50B301ECA15B50044B316 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		DAF50B2F1ECA15B50044B316 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		DAF50B301ECA15B50044B316 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		DAF50B331ECA15B50044B316 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAF50B351ECA15B50044B316 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAF50B381ECA15B50044B316 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,8 +65,8 @@
 				DAF50B2A1ECA15B50044B316 /* AppDelegate.m */,
 				DAF50B2C1ECA15B50044B316 /* MasterViewController.h */,
 				DAF50B2D1ECA15B50044B316 /* MasterViewController.m */,
-				DAF50B2F1ECA15B50044B316 /* DetailViewController.h */,
-				DAF50B301ECA15B50044B316 /* DetailViewController.m */,
+				DAF50B2F1ECA15B50044B316 /* MapViewController.h */,
+				DAF50B301ECA15B50044B316 /* MapViewController.m */,
 				DAF50B321ECA15B50044B316 /* Main.storyboard */,
 				DAF50B351ECA15B50044B316 /* Assets.xcassets */,
 				DAF50B371ECA15B50044B316 /* LaunchScreen.storyboard */,
@@ -159,7 +159,7 @@
 				DAF50B2B1ECA15B50044B316 /* AppDelegate.m in Sources */,
 				DAF50B2E1ECA15B50044B316 /* MasterViewController.m in Sources */,
 				DAF50B281ECA15B50044B316 /* main.m in Sources */,
-				DAF50B311ECA15B50044B316 /* DetailViewController.m in Sources */,
+				DAF50B311ECA15B50044B316 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
