@@ -16,6 +16,7 @@
 		DA8805841ED347DC000CB4A8 /* libMapboxPluginKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8805781ED34744000CB4A8 /* libMapboxPluginKit.a */; };
 		DA8805861ED34868000CB4A8 /* MBXPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = DA8805811ED34787000CB4A8 /* MBXPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA88058A1ED34CD2000CB4A8 /* PluginTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8805891ED34CD2000CB4A8 /* PluginTableViewController.m */; };
+		DA88058B1ED3700F000CB4A8 /* libMapboxPluginKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8805781ED34744000CB4A8 /* libMapboxPluginKit.a */; };
 		DAF50B281ECA15B50044B316 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF50B271ECA15B50044B316 /* main.m */; };
 		DAF50B2B1ECA15B50044B316 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF50B2A1ECA15B50044B316 /* AppDelegate.m */; };
 		DAF50B2E1ECA15B50044B316 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF50B2D1ECA15B50044B316 /* MasterViewController.m */; };
@@ -104,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA88058B1ED3700F000CB4A8 /* libMapboxPluginKit.a in Frameworks */,
 				DA88056A1ED342F0000CB4A8 /* LocalizationPlugin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -4,25 +4,22 @@ static const NSString *PluginClassNames[] = {
     @"MBXLocalizationPlugin",
 };
 
+NSString *DisplayNameForPluginClassName(NSString *pluginClassName) {
+    NSBundle *bundle = [NSBundle bundleForClass:NSClassFromString(pluginClassName)];
+    NSString *bundleName = [bundle objectForInfoDictionaryKey:@"CFBundleDisplayName"];
+    return [NSString stringWithFormat:@"%@ (%@)", pluginClassName, bundleName];
+}
+
 @interface PluginTableViewController ()
 
 @end
 
 @implementation PluginTableViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.selectedClassName = nil;
 }
 
 #pragma mark - Table view data source
@@ -38,7 +35,7 @@ static const NSString *PluginClassNames[] = {
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"pluginClassName" forIndexPath:indexPath];
     
-    cell.textLabel.text = PluginClassNames[indexPath.row].copy;
+    cell.textLabel.text = DisplayNameForPluginClassName(PluginClassNames[indexPath.row].copy);
     
     return cell;
 }
@@ -46,7 +43,8 @@ static const NSString *PluginClassNames[] = {
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
-    [self performSegueWithIdentifier:@"selectPlugin" sender:PluginClassNames[indexPath.row].copy];
+    self.selectedClassName = PluginClassNames[indexPath.row].copy;
+    [self performSegueWithIdentifier:@"selectPlugin" sender:self];
 }
 
 /*

@@ -1,5 +1,6 @@
 #import "MasterViewController.h"
 #import "MapViewController.h"
+#import "PluginTableViewController.h"
 
 @interface MasterViewController ()
 
@@ -14,6 +15,7 @@
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
     self.mapViewController = (MapViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    self.pluginClassNames = [[NSMutableArray alloc] init];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -24,14 +26,7 @@
 #pragma mark - Segues
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"selectPlugin"]) {
-        if (!self.pluginClassNames) {
-            self.pluginClassNames = [[NSMutableArray alloc] init];
-        }
-        [self.pluginClassNames insertObject:sender atIndex:0];
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-        [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-    } else if ([segue.identifier isEqualToString:@"showMap"]) {
+    if ([segue.identifier isEqualToString:@"showMap"]) {
         MapViewController *controller = (MapViewController *)[[segue destinationViewController] topViewController];
         controller.pluginClassNames = self.pluginClassNames;
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
@@ -39,7 +34,15 @@
     }
 }
 
-- (IBAction)unwindToMasterViewController:(UIStoryboardSegue *)segue {
+- (IBAction)unwindToMasterViewController:(UIStoryboardSegue *)sender {
+    if ([sender.identifier isEqualToString:@"selectPlugin"]) {
+        PluginTableViewController *tableViewController = (PluginTableViewController *)sender.sourceViewController;
+        if (tableViewController.selectedClassName && ![self.pluginClassNames containsObject:tableViewController.selectedClassName]) {
+            [self.pluginClassNames addObject:tableViewController.selectedClassName];
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.pluginClassNames.count - 1 inSection:0];
+            [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        }
+    }
 }
 
 #pragma mark - Table View
@@ -56,8 +59,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSDate *object = self.pluginClassNames[indexPath.row];
-    cell.textLabel.text = [object description];
+    cell.textLabel.text = DisplayNameForPluginClassName(self.pluginClassNames[indexPath.row]);
     return cell;
 }
 
@@ -75,5 +77,8 @@
     }
 }
 
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+    [self.pluginClassNames exchangeObjectAtIndex:fromIndexPath.row withObjectAtIndex:toIndexPath.row];
+}
 
 @end
