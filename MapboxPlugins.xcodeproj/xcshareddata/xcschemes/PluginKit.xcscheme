@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DA8805771ED34744000CB4A8"
-               BuildableName = "libPluginKit.a"
+               BuildableName = "libMapboxPluginKit.a"
                BlueprintName = "PluginKit"
                ReferencedContainer = "container:MapboxPlugins.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DA8805771ED34744000CB4A8"
-            BuildableName = "libPluginKit.a"
+            BuildableName = "libMapboxPluginKit.a"
             BlueprintName = "PluginKit"
             ReferencedContainer = "container:MapboxPlugins.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DA8805771ED34744000CB4A8"
-            BuildableName = "libPluginKit.a"
+            BuildableName = "libMapboxPluginKit.a"
             BlueprintName = "PluginKit"
             ReferencedContainer = "container:MapboxPlugins.xcodeproj">
          </BuildableReference>
