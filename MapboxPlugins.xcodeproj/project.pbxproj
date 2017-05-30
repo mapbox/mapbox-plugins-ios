@@ -16,6 +16,9 @@
 		DA8805861ED34868000CB4A8 /* MBXPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = DA8805811ED34787000CB4A8 /* MBXPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA88058A1ED34CD2000CB4A8 /* PluginTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8805891ED34CD2000CB4A8 /* PluginTableViewController.m */; };
 		DA8805961ED3D195000CB4A8 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8805951ED3D195000CB4A8 /* Mapbox.framework */; };
+		DADBBE831EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DADBBE811EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.h */; };
+		DADBBE841EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DADBBE821EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.m */; };
+		DADBBE861EDDF904009F8AC8 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8805951ED3D195000CB4A8 /* Mapbox.framework */; };
 		DAF50B281ECA15B50044B316 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF50B271ECA15B50044B316 /* main.m */; };
 		DAF50B2B1ECA15B50044B316 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF50B2A1ECA15B50044B316 /* AppDelegate.m */; };
 		DAF50B2E1ECA15B50044B316 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF50B2D1ECA15B50044B316 /* MasterViewController.m */; };
@@ -78,6 +81,8 @@
 		DA8805881ED34CD2000CB4A8 /* PluginTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PluginTableViewController.h; sourceTree = "<group>"; };
 		DA8805891ED34CD2000CB4A8 /* PluginTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PluginTableViewController.m; sourceTree = "<group>"; };
 		DA8805951ED3D195000CB4A8 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = Carthage/Build/iOS/Mapbox.framework; sourceTree = "<group>"; };
+		DADBBE811EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MGLVectorSource+MBXAdditions.h"; sourceTree = "<group>"; };
+		DADBBE821EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MGLVectorSource+MBXAdditions.m"; sourceTree = "<group>"; };
 		DAF50B231ECA15B50044B316 /* Funhouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Funhouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF50B271ECA15B50044B316 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DAF50B291ECA15B50044B316 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -97,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DADBBE861EDDF904009F8AC8 /* Mapbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +131,8 @@
 				DA8805651ED342F0000CB4A8 /* LocalizationPlugin.h */,
 				DA8805701ED34361000CB4A8 /* MBXLocalizationPlugin.h */,
 				DA8805711ED34361000CB4A8 /* MBXLocalizationPlugin.m */,
+				DADBBE811EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.h */,
+				DADBBE821EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.m */,
 				DA8805661ED342F0000CB4A8 /* Info.plist */,
 			);
 			path = LocalizationPlugin;
@@ -204,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA8805721ED34361000CB4A8 /* MBXLocalizationPlugin.h in Headers */,
+				DADBBE831EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.h in Headers */,
 				DA8805671ED342F0000CB4A8 /* LocalizationPlugin.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,6 +236,7 @@
 				DA88055F1ED342F0000CB4A8 /* Frameworks */,
 				DA8805601ED342F0000CB4A8 /* Headers */,
 				DA8805611ED342F0000CB4A8 /* Resources */,
+				DADBBE851EDDF8EB009F8AC8 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -358,6 +368,21 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
+		DADBBE851EDDF8EB009F8AC8 /* Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Mapbox.framework",
+			);
+			name = "Copy Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -365,6 +390,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DADBBE841EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.m in Sources */,
 				DA8805731ED34361000CB4A8 /* MBXLocalizationPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +459,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = LocalizationPlugin/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -454,6 +484,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = LocalizationPlugin/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -469,6 +503,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = GJZR2MEM28;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "Mapbox$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -479,6 +517,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = GJZR2MEM28;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "Mapbox$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

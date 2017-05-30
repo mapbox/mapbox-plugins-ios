@@ -1,12 +1,15 @@
 #import "AppDelegate.h"
 #import "MapViewController.h"
 
+#import <Mapbox/Mapbox.h>
+
+NSString * const MBXMapboxAccessTokenDefaultsKey = @"MBXMapboxAccessToken";
+
 @interface AppDelegate () <UISplitViewControllerDelegate>
 
 @end
 
 @implementation AppDelegate
-
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
@@ -14,6 +17,13 @@
     UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
     navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
     splitViewController.delegate = self;
+    
+    // Set access token, unless MGLAccountManager already read it in from Info.plist.
+    if (![MGLAccountManager accessToken].length) {
+        NSString *accessToken = [[NSUserDefaults standardUserDefaults] objectForKey:MBXMapboxAccessTokenDefaultsKey];
+        [MGLAccountManager setAccessToken:accessToken];
+    }
+    
     return YES;
 }
 
@@ -44,6 +54,9 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (BOOL)application:(UIApplication *)application shouldSaveApplicationState:(NSCoder *)coder {
+    return YES;
+}
 
 #pragma mark - Split view
 

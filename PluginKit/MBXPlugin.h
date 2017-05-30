@@ -1,9 +1,11 @@
 #import <Foundation/Foundation.h>
 
+@class MGLMapView;
+
 @protocol MBXPlugin <NSObject>
 
-- (void)addToMapView:(UIView *)view;
+- (void)addToMapView:(MGLMapView *)mapView;
 
-- (void)removeFromMapView:(UIView *)view;
+- (void)removeFromMapView:(MGLMapView *)mapView;
 
 @end

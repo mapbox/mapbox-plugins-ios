@@ -1,6 +1,9 @@
 #import "MasterViewController.h"
 #import "MapViewController.h"
 #import "PluginTableViewController.h"
+#import "AppDelegate.h"
+
+#import <Mapbox/Mapbox.h>
 
 @interface MasterViewController ()
 
@@ -21,6 +24,29 @@
 - (void)viewWillAppear:(BOOL)animated {
     self.clearsSelectionOnViewWillAppear = self.splitViewController.isCollapsed;
     [super viewWillAppear:animated];
+    
+    if (![MGLAccountManager accessToken].length) {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Access Token" message:@"Enter your Mapbox access token to load Mapbox-hosted tiles and styles:" preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+            textField.keyboardType = UIKeyboardTypeURL;
+            textField.autocorrectionType = UITextAutocorrectionTypeNo;
+            textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
+        }];
+        
+        [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
+        UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            UITextField *textField = alertController.textFields.firstObject;
+            NSString *accessToken = textField.text;
+            [[NSUserDefaults standardUserDefaults] setObject:accessToken forKey:MBXMapboxAccessTokenDefaultsKey];
+            [MGLAccountManager setAccessToken:accessToken];
+        }];
+        [alertController addAction:OKAction];
+        
+        if ([alertController respondsToSelector:@selector(setPreferredAction:)]) {
+            alertController.preferredAction = OKAction;
+        }
+        [self.navigationController presentViewController:alertController animated:YES completion:nil];
+    }
 }
 
 #pragma mark - Segues
