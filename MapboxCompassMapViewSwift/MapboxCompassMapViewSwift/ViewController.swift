@@ -16,18 +16,25 @@ class ViewController: UIViewController, MGLMapViewDelegate, ARSCNViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        compass = MBXCompassMapView(position: .topRight, inView: view, styleURL: URL(string: "mapbox://styles/jordankiley/cj5bj9vn37uh82rnuezu0bk3y"), withArrow: false)
-//            MBXCompassMapView(frame: CGRect(x: 20, y: 20, width: view.bounds.width / 3, height: view.bounds.width / 3), styleURL: URL(string: "mapbox://styles/jordankiley/cj5bj9vn37uh82rnuezu0bk3y"), withArrow: false)
-        compass.mapView.setBorderColorAndWidth(color: UIColor.red.cgColor, width: 5)
+        compass = MBXCompassMapView(position: .topRight,
+                                    inView: view,
+                                    styleURL: URL(string: "mapbox://styles/jordankiley/cj5eeueie1bsa2rp4swgcteml"))
+//        
+//        compass.setMapViewBorderColorAndWidth(color: UIColor.black.cgColor,
+//                                              width: 1)
+//        
         view.addSubview(compass)
         
+        createSceneView()
+    }
+    
+    func createSceneView() {
         sceneView = ARSCNView(frame: view.bounds)
         sceneView.delegate = self
         sceneView.scene = SCNScene()
         sceneView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view.insertSubview(sceneView, belowSubview: compass)
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         

@@ -11,47 +11,73 @@ import Mapbox
 class MBXCompassMapView: UIView, MGLMapViewDelegate {
     
     var mapView : MBXMapView!
-    var arrow : CustomArrow!
+    
+    // Initializer that creates a basic map view.
     override init(frame: CGRect) {
         super.init(frame: frame)
         
     }
     
-    required convenience init(frame: CGRect, styleURL: URL?, withArrow: Bool) {
+    // Initializer that allows user to create a custom map view frame.
+    required convenience init(frame: CGRect, styleURL: URL?) {
         self.init(frame: frame)
         //        self.backgroundColor = UIColor.blue
         self.autoresizingMask = [.flexibleBottomMargin]
-        if withArrow {
-            arrow = CustomArrow(size: frame.width)
-            arrow.backgroundColor = UIColor.gray.cgColor
-            mapView.layer.addSublayer(arrow)
-        }
         
-        let mapViewFrame = CGRect(x: frame.width / 10, y: frame.width / 10, width: frame.width * 0.8, height: frame.height * 0.8)
+        
+        let mapViewFrame = CGRect(x: frame.width / 10,
+                                  y: frame.width / 10,
+                                  width: frame.width * 0.7,
+                                  height: frame.height * 0.7)
         mapView = MBXMapView(frame: mapViewFrame, styleURL: styleURL)
         mapView.delegate = self
+        
+        // Create an arrow if true.
         
         self.addSubview(mapView)
     }
     
     // Set the position of the compass by using an enum. Want to implement an option for compass size as well.
-    convenience init(position: compassPosition, inView: UIView, styleURL: URL?, withArrow: Bool) {
+    convenience init(position: compassPosition, inView: UIView, styleURL: URL?) {
         switch position {
+            
         case .topLeft:
-            self.init(frame: CGRect(x: 20, y: 20, width: inView.bounds.width / 3, height: inView.bounds.width / 3), styleURL: styleURL, withArrow: withArrow)
+            self.init(frame: CGRect(x: 20,
+                                    y: 20,
+                                    width: inView.bounds.width / 3,
+                                    height: inView.bounds.width / 3),
+                      styleURL: styleURL)
+            
         case .topRight:
-            self.init(frame: CGRect(x: inView.bounds.width * 2/3, y: 20, width: inView.bounds.width / 3, height: inView.bounds.width / 3), styleURL: styleURL, withArrow: withArrow)
+            self.init(frame: CGRect(x: inView.bounds.width * 2/3,
+                                    y: 20,
+                                    width: inView.bounds.width / 3,
+                                    height: inView.bounds.width / 3),
+                      styleURL: styleURL)
+            
         case .bottomRight:
             print("bottomRight")
-            self.init(frame: CGRect(x: inView.bounds.width * 2/3, y: inView.bounds.height - (inView.bounds.width * 1/3) - 20, width: inView.bounds.width / 3, height: inView.bounds.width / 3), styleURL: styleURL, withArrow: withArrow)
-
+            self.init(frame: CGRect(x: inView.bounds.width * 2/3,
+                                    y: inView.bounds.height - (inView.bounds.width * 1/3) - 20,
+                                    width: inView.bounds.width / 3,
+                                    height: inView.bounds.width / 3),
+                      styleURL: styleURL)
+            
         case .bottomLeft:
             print("bottomLeft")
-            self.init(frame: CGRect(x: 20, y: inView.bounds.height - (inView.bounds.width * 1/3) - 20, width: inView.bounds.width / 3, height: inView.bounds.width / 3), styleURL: styleURL, withArrow: withArrow)
-
+            self.init(frame: CGRect(x: 20,
+                                    y: inView.bounds.height - (inView.bounds.width * 1/3) - 20,
+                                    width: inView.bounds.width / 3,
+                                    height: inView.bounds.width / 3),
+                      styleURL: styleURL)
+            
         default:
             print("center")
-            self.init(frame: CGRect(x: (inView.bounds.width / 2) - (inView.bounds.width / 6), y: (inView.bounds.height / 2) - (inView.bounds.width / 6), width: inView.bounds.width / 3, height: inView.bounds.width / 3), styleURL: styleURL, withArrow: withArrow)
+            self.init(frame: CGRect(x: (inView.bounds.width / 2) - (inView.bounds.width / 6),
+                                    y: (inView.bounds.height / 2) - (inView.bounds.width / 6),
+                                    width: inView.bounds.width / 3,
+                                    height: inView.bounds.width / 3),
+                      styleURL: styleURL)
         }
     }
     
@@ -59,13 +85,12 @@ class MBXCompassMapView: UIView, MGLMapViewDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func mapView(_ mapView: MGLMapView, didUpdate userLocation: MGLUserLocation?) {
-        print(mapView.direction)
-        if userLocation?.heading != nil && arrow != nil {
-            let rotation = CGAffineTransform.identity.rotated(
-                by: -MGLRadiansFromDegrees(mapView.direction -  (userLocation?.heading!.trueHeading)!))
-            arrow.setAffineTransform(rotation)
-        }
+    func setMapViewBorderColorAndWidth(color: CGColor, width: CGFloat) {
+        mapView.layer.borderWidth = width
+        mapView.layer.borderColor = color
+//        mapView.layer.borderColor?.alpha = 0.3
+        
+        
     }
     
     enum compassPosition {
@@ -75,6 +100,7 @@ class MBXCompassMapView: UIView, MGLMapViewDelegate {
         case bottomLeft
         case center
     }
+    
 }
 
 class MBXMapView: MGLMapView, MGLMapViewDelegate {
@@ -85,8 +111,12 @@ class MBXMapView: MGLMapView, MGLMapViewDelegate {
         self.layer.cornerRadius = self.frame.width / 2
         self.logoView.isHidden = true
         self.attributionButton.isHidden = true
+        self.compassView.isHidden = true
+        self.isUserInteractionEnabled = false
         self.autoresizingMask = [.flexibleBottomMargin]
-        //        self.alpha = 0.5
+        self.alpha = 0.8
+        self.tintColor = .black
+        
     }
     
     func mapViewWillStartLoadingMap(_ mapView: MGLMapView) {
@@ -97,6 +127,7 @@ class MBXMapView: MGLMapView, MGLMapViewDelegate {
         self.init(frame: frame)
         self.styleURL = styleURL
     }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -109,46 +140,11 @@ extension MBXMapView {
         self.displayHeadingCalibration = false
     }
     
-    func setBorderColorAndWidth(color: CGColor, width: CGFloat) {
-        self.layer.borderWidth = width
-        self.layer.borderColor = color
-    }
-}
-
-// code from the custom user annotation example
-class CustomArrow: CAShapeLayer {
-    var size : CGFloat!
-    var arrowSize : CGFloat!
-    
-    convenience init(size: CGFloat) {
-        self.init()
-        self.size = size
-        setupArrow()
+    func mapView(_ mapView: MGLMapView, didChange mode: MGLUserTrackingMode, animated: Bool) {
+        if mode != .followWithHeading {
+            self.userTrackingMode = .followWithHeading
+        }
     }
     
-    private func setupArrow() {
-        arrowSize = size / 2.5
-        self.path = arrowPath()
-        self.frame = CGRect(x: 0, y: 0, width: arrowSize, height: arrowSize)
-        self.position = CGPoint(x: size / 2, y: size / -4.5)
-    }
     
-    private func arrowPath() -> CGPath {
-        // Draw an arrow.
-        
-        let max: CGFloat = arrowSize
-        
-        let top = CGPoint(x: max * 0.5, y: max * 0.4)
-        let left = CGPoint(x: 0, y: max)
-        let right = CGPoint(x: max, y: max)
-        let center = CGPoint(x: max * 0.5, y: max * 0.8)
-        
-        let bezierPath = UIBezierPath()
-        bezierPath.move(to: top)
-        bezierPath.addLine(to: left)
-        bezierPath.addQuadCurve(to: right, controlPoint: center)
-        bezierPath.addLine(to: top)
-        bezierPath.close()
-        return bezierPath.cgPath
-    }
 }
