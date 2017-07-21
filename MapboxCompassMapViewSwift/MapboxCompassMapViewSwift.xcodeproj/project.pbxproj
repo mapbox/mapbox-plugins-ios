@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E51A5321F1FD04F00320FDA /* MBXCompassMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E51A5311F1FD04F00320FDA /* MBXCompassMapView.swift */; };
+		3ECB131C1F1FCF5A004D68B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB131B1F1FCF5A004D68B0 /* AppDelegate.swift */; };
+		3ECB131E1F1FCF5A004D68B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB131D1F1FCF5A004D68B0 /* ViewController.swift */; };
+		3ECB13211F1FCF5A004D68B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ECB131F1F1FCF5A004D68B0 /* Main.storyboard */; };
+		3ECB13231F1FCF5A004D68B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ECB13221F1FCF5A004D68B0 /* Assets.xcassets */; };
+		3ECB13261F1FCF5A004D68B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ECB13241F1FCF5A004D68B0 /* LaunchScreen.storyboard */; };
+		FE3B05773B4575659FD82EB6 /* Pods_MapboxCompassMapViewSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F649570D7CC8E3D9D580C059 /* Pods_MapboxCompassMapViewSwift.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		01BBE1F1B8B05E603ACE6678 /* Pods-MapboxCompassMapViewSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapboxCompassMapViewSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapboxCompassMapViewSwift/Pods-MapboxCompassMapViewSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		3E51A5311F1FD04F00320FDA /* MBXCompassMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBXCompassMapView.swift; sourceTree = "<group>"; };
+		3ECB13181F1FCF5A004D68B0 /* MapboxCompassMapViewSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapboxCompassMapViewSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ECB131B1F1FCF5A004D68B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3ECB131D1F1FCF5A004D68B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3ECB13201F1FCF5A004D68B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3ECB13221F1FCF5A004D68B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3ECB13251F1FCF5A004D68B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3ECB13271F1FCF5A004D68B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6B8652FBFF131585F5F9611 /* Pods-MapboxCompassMapViewSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapboxCompassMapViewSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-MapboxCompassMapViewSwift/Pods-MapboxCompassMapViewSwift.release.xcconfig"; sourceTree = "<group>"; };
+		F649570D7CC8E3D9D580C059 /* Pods_MapboxCompassMapViewSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapboxCompassMapViewSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3ECB13151F1FCF5A004D68B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE3B05773B4575659FD82EB6 /* Pods_MapboxCompassMapViewSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3ECB130F1F1FCF5A004D68B0 = {
+			isa = PBXGroup;
+			children = (
+				3ECB131A1F1FCF5A004D68B0 /* MapboxCompassMapViewSwift */,
+				3ECB13191F1FCF5A004D68B0 /* Products */,
+				90CA3C87D43031C5916C4A7A /* Pods */,
+				989D025956FA08E9B581FD58 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3ECB13191F1FCF5A004D68B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3ECB13181F1FCF5A004D68B0 /* MapboxCompassMapViewSwift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3ECB131A1F1FCF5A004D68B0 /* MapboxCompassMapViewSwift */ = {
+			isa = PBXGroup;
+			children = (
+				3ECB131B1F1FCF5A004D68B0 /* AppDelegate.swift */,
+				3ECB131D1F1FCF5A004D68B0 /* ViewController.swift */,
+				3E51A5311F1FD04F00320FDA /* MBXCompassMapView.swift */,
+				3ECB131F1F1FCF5A004D68B0 /* Main.storyboard */,
+				3ECB13221F1FCF5A004D68B0 /* Assets.xcassets */,
+				3ECB13241F1FCF5A004D68B0 /* LaunchScreen.storyboard */,
+				3ECB13271F1FCF5A004D68B0 /* Info.plist */,
+			);
+			path = MapboxCompassMapViewSwift;
+			sourceTree = "<group>";
+		};
+		90CA3C87D43031C5916C4A7A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				01BBE1F1B8B05E603ACE6678 /* Pods-MapboxCompassMapViewSwift.debug.xcconfig */,
+				D6B8652FBFF131585F5F9611 /* Pods-MapboxCompassMapViewSwift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		989D025956FA08E9B581FD58 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F649570D7CC8E3D9D580C059 /* Pods_MapboxCompassMapViewSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3ECB13171F1FCF5A004D68B0 /* MapboxCompassMapViewSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3ECB132A1F1FCF5A004D68B0 /* Build configuration list for PBXNativeTarget "MapboxCompassMapViewSwift" */;
+			buildPhases = (
+				B61FCC639B25AC328C22AD75 /* [CP] Check Pods Manifest.lock */,
+				3ECB13141F1FCF5A004D68B0 /* Sources */,
+				3ECB13151F1FCF5A004D68B0 /* Frameworks */,
+				3ECB13161F1FCF5A004D68B0 /* Resources */,
+				F17FB8A5DE6AA84186ED285B /* [CP] Embed Pods Frameworks */,
+				428EF6D67855DE4BCCFD6088 /* [CP] Copy Pods Resources */,
+				3ECFFEB11F227B0F00B65FE5 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MapboxCompassMapViewSwift;
+			productName = MapboxCompassMapViewSwift;
+			productReference = 3ECB13181F1FCF5A004D68B0 /* MapboxCompassMapViewSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3ECB13101F1FCF5A004D68B0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = Mapbox;
+				TargetAttributes = {
+					3ECB13171F1FCF5A004D68B0 = {
+						CreatedOnToolsVersion = 9.0;
+					};
+				};
+			};
+			buildConfigurationList = 3ECB13131F1FCF5A004D68B0 /* Build configuration list for PBXProject "MapboxCompassMapViewSwift" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3ECB130F1F1FCF5A004D68B0;
+			productRefGroup = 3ECB13191F1FCF5A004D68B0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3ECB13171F1FCF5A004D68B0 /* MapboxCompassMapViewSwift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3ECB13161F1FCF5A004D68B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3ECB13261F1FCF5A004D68B0 /* LaunchScreen.storyboard in Resources */,
+				3ECB13231F1FCF5A004D68B0 /* Assets.xcassets in Resources */,
+				3ECB13211F1FCF5A004D68B0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3ECFFEB11F227B0F00B65FE5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/insert-mapbox-token.sh";
+		};
+		428EF6D67855DE4BCCFD6088 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MapboxCompassMapViewSwift/Pods-MapboxCompassMapViewSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B61FCC639B25AC328C22AD75 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F17FB8A5DE6AA84186ED285B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MapboxCompassMapViewSwift/Pods-MapboxCompassMapViewSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3ECB13141F1FCF5A004D68B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E51A5321F1FD04F00320FDA /* MBXCompassMapView.swift in Sources */,
+				3ECB131E1F1FCF5A004D68B0 /* ViewController.swift in Sources */,
+				3ECB131C1F1FCF5A004D68B0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3ECB131F1F1FCF5A004D68B0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3ECB13201F1FCF5A004D68B0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3ECB13241F1FCF5A004D68B0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3ECB13251F1FCF5A004D68B0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3ECB13281F1FCF5A004D68B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3ECB13291F1FCF5A004D68B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3ECB132B1F1FCF5A004D68B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01BBE1F1B8B05E603ACE6678 /* Pods-MapboxCompassMapViewSwift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 85826LGZGV;
+				INFOPLIST_FILE = MapboxCompassMapViewSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "--.MapboxCompassMapViewSwift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3ECB132C1F1FCF5A004D68B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6B8652FBFF131585F5F9611 /* Pods-MapboxCompassMapViewSwift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 85826LGZGV;
+				INFOPLIST_FILE = MapboxCompassMapViewSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "--.MapboxCompassMapViewSwift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3ECB13131F1FCF5A004D68B0 /* Build configuration list for PBXProject "MapboxCompassMapViewSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3ECB13281F1FCF5A004D68B0 /* Debug */,
+				3ECB13291F1FCF5A004D68B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3ECB132A1F1FCF5A004D68B0 /* Build configuration list for PBXNativeTarget "MapboxCompassMapViewSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3ECB132B1F1FCF5A004D68B0 /* Debug */,
+				3ECB132C1F1FCF5A004D68B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3ECB13101F1FCF5A004D68B0 /* Project object */;
+}
