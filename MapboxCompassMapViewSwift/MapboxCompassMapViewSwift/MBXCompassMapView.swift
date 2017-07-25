@@ -11,6 +11,15 @@ import Mapbox
 class MBXCompassMapView: MGLMapView, MGLMapViewDelegate, UIGestureRecognizerDelegate {
     
     var position : compassPosition?
+    var isMapInteractive : Bool = true {
+        didSet {
+            // Disabling individually to test implementing custom zoom.
+            self.isZoomEnabled = false
+            self.isScrollEnabled = false
+            self.isPitchEnabled = false
+            self.isRotateEnabled = false
+        }
+    }
     
     override convenience init(frame: CGRect, styleURL: URL?) {
         self.init(frame: frame)
@@ -21,23 +30,20 @@ class MBXCompassMapView: MGLMapView, MGLMapViewDelegate, UIGestureRecognizerDele
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.delegate = self
-        self.logoView.isHidden = true
-        self.attributionButton.isHidden = true
-        self.compassView.isHidden = true
-        self.isUserInteractionEnabled = false
-        self.isZoomEnabled = false
-        self.isScrollEnabled = false
-        self.isPitchEnabled = false
-        self.isRotateEnabled = false
-//        self.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         self.alpha = 0.8
         self.delegate = self
     }
     
     override func layoutSubviews() {
-        
         self.layer.cornerRadius = self.frame.width / 2
     }
+    
+    private func hideMapSubviews() {
+        self.logoView.isHidden = true
+        self.attributionButton.isHidden = true
+        self.compassView.isHidden = true
+    }
+    
     // TODO: Variables for values? Add size options (small, medium, large?)
     convenience init(position: compassPosition, inView: UIView, styleURL: URL?) {
         let baseAmount : CGFloat
@@ -47,9 +53,9 @@ class MBXCompassMapView: MGLMapView, MGLMapViewDelegate, UIGestureRecognizerDele
             baseAmount = inView.bounds.height
         }
         
+        // Is this necessary? Can I set this through constraints instead?
         switch position {
         case .topLeft:
-            
             self.init(frame: CGRect(x: 20,
                                     y: 20,
                                     width: baseAmount / 3,
@@ -65,7 +71,6 @@ class MBXCompassMapView: MGLMapView, MGLMapViewDelegate, UIGestureRecognizerDele
             
             
         case .bottomRight:
-            print("bottomRight")
             self.init(frame: CGRect(x: inView.bounds.width * 2/3,
                                     y: inView.bounds.height - (inView.bounds.width * 1/3) - 20,
                                     width: inView.bounds.width / 3,
@@ -73,7 +78,6 @@ class MBXCompassMapView: MGLMapView, MGLMapViewDelegate, UIGestureRecognizerDele
                       styleURL: styleURL)
             
         case .bottomLeft:
-            print("bottomLeft")
             self.init(frame: CGRect(x: 20,
                                     y: inView.bounds.height - (inView.bounds.width * 1/3) - 20,
                                     width: inView.bounds.width / 3,
@@ -81,7 +85,6 @@ class MBXCompassMapView: MGLMapView, MGLMapViewDelegate, UIGestureRecognizerDele
                       styleURL: styleURL)
             
         default:
-            print("center")
             self.init(frame: CGRect(x: (inView.bounds.width / 2) - (inView.bounds.width / 6),
                                     y: (inView.bounds.height / 2) - (inView.bounds.width / 6),
                                     width: inView.bounds.width / 3,
