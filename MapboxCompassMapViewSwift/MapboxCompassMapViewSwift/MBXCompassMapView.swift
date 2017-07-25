@@ -8,52 +8,61 @@
 
 import Mapbox
 
-class MBXCompassMapView: UIView, MGLMapViewDelegate {
+class MBXCompassMapView: MGLMapView, MGLMapViewDelegate, UIGestureRecognizerDelegate {
     
-    var mapView : MBXMapView!
+    var position : compassPosition?
     
-    // Initializer that creates a basic map view.
+    override convenience init(frame: CGRect, styleURL: URL?) {
+        self.init(frame: frame)
+        self.styleURL = styleURL
+    }
+    
+    // TODO: Clean up.
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        self.delegate = self
+        self.logoView.isHidden = true
+        self.attributionButton.isHidden = true
+        self.compassView.isHidden = true
+        self.isUserInteractionEnabled = false
+        self.isZoomEnabled = false
+        self.isScrollEnabled = false
+        self.isPitchEnabled = false
+        self.isRotateEnabled = false
+//        self.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        self.alpha = 0.8
+        self.delegate = self
     }
     
-    // Initializer that allows user to create a custom map view frame.
-    required convenience init(frame: CGRect, styleURL: URL?) {
-        self.init(frame: frame)
-        //        self.backgroundColor = UIColor.blue
-        self.autoresizingMask = [.flexibleBottomMargin]
+    override func layoutSubviews() {
         
-        
-        let mapViewFrame = CGRect(x: frame.width / 10,
-                                  y: frame.width / 10,
-                                  width: frame.width * 0.7,
-                                  height: frame.height * 0.7)
-        mapView = MBXMapView(frame: mapViewFrame, styleURL: styleURL)
-        mapView.delegate = self
-        
-        // Create an arrow if true.
-        
-        self.addSubview(mapView)
+        self.layer.cornerRadius = self.frame.width / 2
     }
-    
-    // Set the position of the compass by using an enum. Want to implement an option for compass size as well.
+    // TODO: Variables for values? Add size options (small, medium, large?)
     convenience init(position: compassPosition, inView: UIView, styleURL: URL?) {
+        let baseAmount : CGFloat
+        if inView.bounds.width < inView.bounds.height {
+            baseAmount = inView.bounds.width
+        } else {
+            baseAmount = inView.bounds.height
+        }
+        
         switch position {
-            
         case .topLeft:
+            
             self.init(frame: CGRect(x: 20,
                                     y: 20,
-                                    width: inView.bounds.width / 3,
-                                    height: inView.bounds.width / 3),
+                                    width: baseAmount / 3,
+                                    height: baseAmount / 3),
                       styleURL: styleURL)
             
         case .topRight:
-            self.init(frame: CGRect(x: inView.bounds.width * 2/3,
+            self.init(frame: CGRect(x: baseAmount * 2/3 - 20,
                                     y: 20,
-                                    width: inView.bounds.width / 3,
-                                    height: inView.bounds.width / 3),
+                                    width: baseAmount / 3,
+                                    height: baseAmount / 3),
                       styleURL: styleURL)
+            
             
         case .bottomRight:
             print("bottomRight")
@@ -79,6 +88,11 @@ class MBXCompassMapView: UIView, MGLMapViewDelegate {
                                     height: inView.bounds.width / 3),
                       styleURL: styleURL)
         }
+        self.position = position
+    }
+    
+    func mapViewWillStartLoadingMap(_ mapView: MGLMapView) {
+        self.userTrackingMode = .followWithHeading
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -86,11 +100,8 @@ class MBXCompassMapView: UIView, MGLMapViewDelegate {
     }
     
     func setMapViewBorderColorAndWidth(color: CGColor, width: CGFloat) {
-        mapView.layer.borderWidth = width
-        mapView.layer.borderColor = color
-//        mapView.layer.borderColor?.alpha = 0.3
-        
-        
+        self.layer.borderWidth = width
+        self.layer.borderColor = color
     }
     
     enum compassPosition {
@@ -100,51 +111,12 @@ class MBXCompassMapView: UIView, MGLMapViewDelegate {
         case bottomLeft
         case center
     }
-    
 }
 
-class MBXMapView: MGLMapView, MGLMapViewDelegate {
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.delegate = self
-        self.layer.cornerRadius = self.frame.width / 2
-        self.logoView.isHidden = true
-        self.attributionButton.isHidden = true
-        self.compassView.isHidden = true
-        self.isUserInteractionEnabled = false
-        self.autoresizingMask = [.flexibleBottomMargin]
-        self.alpha = 0.8
-        self.tintColor = .black
-        
-    }
-    
-    func mapViewWillStartLoadingMap(_ mapView: MGLMapView) {
-        self.userTrackingMode = .followWithHeading
-    }
-    
-    override convenience init(frame: CGRect, styleURL: URL?) {
-        self.init(frame: frame)
-        self.styleURL = styleURL
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
-
-extension MBXMapView {
+extension MBXCompassMapView {
     func setupUserTrackingMode() {
         self.showsUserLocation = true
         self.setUserTrackingMode(.followWithHeading, animated: false)
         self.displayHeadingCalibration = false
     }
-    
-    func mapView(_ mapView: MGLMapView, didChange mode: MGLUserTrackingMode, animated: Bool) {
-        if mode != .followWithHeading {
-            self.userTrackingMode = .followWithHeading
-        }
-    }
-    
-    
 }
