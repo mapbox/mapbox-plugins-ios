@@ -15,7 +15,7 @@ class ViewController: UIViewController, MGLMapViewDelegate, ARSCNViewDelegate {
     var sceneView = ARSCNView()
     override func viewDidLoad() {
         super.viewDidLoad()
-        compass = MBXCompassMapView(frame: CGRect(x: view.bounds.width * 2/3 - 20,
+        compass = MBXCompassMapView(frame: CGRect(x: 20,
                                                   y: 20,
                                                   width: view.bounds.width / 3,
                                                   height: view.bounds.width / 3),
@@ -32,14 +32,14 @@ class ViewController: UIViewController, MGLMapViewDelegate, ARSCNViewDelegate {
     override func viewDidLayoutSubviews() {
         self.view.layoutIfNeeded()
         UIView.animate(withDuration: 1, animations: {
-            self.compass.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0).isActive = true
+            self.compass.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20).isActive = true
             self.compass.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 20).isActive = true
         })
 
     }
     func setConstraints() {
         //            addConstraint(NSLayoutConstraint(item: superview, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: -20))
-        compass.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+        self.compass.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20).isActive = true
         compass.topAnchor.constraint(equalTo: view.topAnchor, constant: 20).isActive = true
         
         if UIDevice.current.orientation == .portrait {
