@@ -10,14 +10,24 @@ import Mapbox
 
 class MBXCompassMapView: MGLMapView, MGLMapViewDelegate, UIGestureRecognizerDelegate {
     
-    var position : compassPosition?
+    private var mapRect : CGRect!
+    private var mapCamera : MGLMapCamera!
     var isMapInteractive : Bool = true {
         didSet {
-            // Disabling individually to test implementing custom zoom.
+            
+            // Disable individually, then add custom gesture recognizers as needed.
             self.isZoomEnabled = false
             self.isScrollEnabled = false
             self.isPitchEnabled = false
             self.isRotateEnabled = false
+        }
+    }
+    
+    var isEnlargeEnabled = false {
+        didSet {
+            let press = UILongPressGestureRecognizer(target: self, action: #selector(expandMapView(_:)))
+            press.minimumPressDuration = 2
+            self.addGestureRecognizer(press)
         }
     }
     
@@ -32,66 +42,63 @@ class MBXCompassMapView: MGLMapView, MGLMapViewDelegate, UIGestureRecognizerDele
         self.delegate = self
         self.alpha = 0.8
         self.delegate = self
+        mapRect = frame
+        hideMapSubviews()
+        
+    }
+    
+    func mapView(_ mapView: MGLMapView, didFinishLoading style: MGLStyle) {
+        mapCamera = camera
     }
     
     override func layoutSubviews() {
         self.layer.cornerRadius = self.frame.width / 2
+
+        if let superview = superview {
+//            addConstraint(NSLayoutConstraint(item: superview, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: -20))
+            
+            topAnchor.constraint(equalTo: superview.topAnchor, constant: 20).isActive = true
+            
+            if UIDevice.current.orientation == .portrait {
+                heightAnchor.constraint(
+                    equalTo: superview.widthAnchor,
+                    multiplier: 0.33).isActive = true
+                widthAnchor.constraint(
+                    equalTo: superview.widthAnchor,
+                    multiplier: 0.33).isActive = true
+            } else {
+                heightAnchor.constraint(
+                    equalTo: superview.heightAnchor,
+                    multiplier: 0.33).isActive = true
+                widthAnchor.constraint(
+                    equalTo: superview.heightAnchor,
+                    multiplier: 0.33).isActive = true
+            }
+        }
     }
-    
+
+    override func layoutIfNeeded() {
+
+        
+    }
     private func hideMapSubviews() {
         self.logoView.isHidden = true
         self.attributionButton.isHidden = true
         self.compassView.isHidden = true
     }
     
-    // TODO: Variables for values? Add size options (small, medium, large?)
-    convenience init(position: compassPosition, inView: UIView, styleURL: URL?) {
-        let baseAmount : CGFloat
-        if inView.bounds.width < inView.bounds.height {
-            baseAmount = inView.bounds.width
-        } else {
-            baseAmount = inView.bounds.height
+    @objc private func expandMapView(_ sender: UILongPressGestureRecognizer) {
+        if sender.state == .ended {
+            if let superview = self.superview {
+                if self.frame.width < superview.frame.width {
+                    self.frame = superview.frame
+                    self.layer.cornerRadius = superview.layer.cornerRadius
+                    self.reloadStyle(self)
+                } else {
+                    self.frame = mapRect
+                }
+            }
         }
-        
-        // Is this necessary? Can I set this through constraints instead?
-        switch position {
-        case .topLeft:
-            self.init(frame: CGRect(x: 20,
-                                    y: 20,
-                                    width: baseAmount / 3,
-                                    height: baseAmount / 3),
-                      styleURL: styleURL)
-            
-        case .topRight:
-            self.init(frame: CGRect(x: baseAmount * 2/3 - 20,
-                                    y: 20,
-                                    width: baseAmount / 3,
-                                    height: baseAmount / 3),
-                      styleURL: styleURL)
-            
-            
-        case .bottomRight:
-            self.init(frame: CGRect(x: inView.bounds.width * 2/3,
-                                    y: inView.bounds.height - (inView.bounds.width * 1/3) - 20,
-                                    width: inView.bounds.width / 3,
-                                    height: inView.bounds.width / 3),
-                      styleURL: styleURL)
-            
-        case .bottomLeft:
-            self.init(frame: CGRect(x: 20,
-                                    y: inView.bounds.height - (inView.bounds.width * 1/3) - 20,
-                                    width: inView.bounds.width / 3,
-                                    height: inView.bounds.width / 3),
-                      styleURL: styleURL)
-            
-        default:
-            self.init(frame: CGRect(x: (inView.bounds.width / 2) - (inView.bounds.width / 6),
-                                    y: (inView.bounds.height / 2) - (inView.bounds.width / 6),
-                                    width: inView.bounds.width / 3,
-                                    height: inView.bounds.width / 3),
-                      styleURL: styleURL)
-        }
-        self.position = position
     }
     
     func mapViewWillStartLoadingMap(_ mapView: MGLMapView) {
@@ -105,14 +112,6 @@ class MBXCompassMapView: MGLMapView, MGLMapViewDelegate, UIGestureRecognizerDele
     func setMapViewBorderColorAndWidth(color: CGColor, width: CGFloat) {
         self.layer.borderWidth = width
         self.layer.borderColor = color
-    }
-    
-    enum compassPosition {
-        case topLeft
-        case topRight
-        case bottomRight
-        case bottomLeft
-        case center
     }
 }
 
