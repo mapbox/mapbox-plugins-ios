@@ -27,6 +27,11 @@ class ViewController: UIViewController, MGLMapViewDelegate, ARSCNViewDelegate {
         view.addSubview(compass)
         createSceneView()
         setConstraints()
+        var button = compass.attributionButton
+        let constraints = compass.attributionButton.constraints
+        button.isHidden = false
+        button.frame = CGRect(x: 10, y: 20, width: compass.attributionButton.frame.width, height: compass.attributionButton.frame.height)
+        view.addSubview(button)
     }
     
     override func viewDidLayoutSubviews() {
