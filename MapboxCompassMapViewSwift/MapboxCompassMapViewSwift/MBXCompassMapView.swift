@@ -53,33 +53,6 @@ class MBXCompassMapView: MGLMapView, MGLMapViewDelegate, UIGestureRecognizerDele
     
     override func layoutSubviews() {
         self.layer.cornerRadius = self.frame.width / 2
-
-        if let superview = superview {
-//            addConstraint(NSLayoutConstraint(item: superview, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: -20))
-            
-            topAnchor.constraint(equalTo: superview.topAnchor, constant: 20).isActive = true
-            
-            if UIDevice.current.orientation == .portrait {
-                heightAnchor.constraint(
-                    equalTo: superview.widthAnchor,
-                    multiplier: 0.33).isActive = true
-                widthAnchor.constraint(
-                    equalTo: superview.widthAnchor,
-                    multiplier: 0.33).isActive = true
-            } else {
-                heightAnchor.constraint(
-                    equalTo: superview.heightAnchor,
-                    multiplier: 0.33).isActive = true
-                widthAnchor.constraint(
-                    equalTo: superview.heightAnchor,
-                    multiplier: 0.33).isActive = true
-            }
-        }
-    }
-
-    override func layoutIfNeeded() {
-
-        
     }
     private func hideMapSubviews() {
         self.logoView.isHidden = true

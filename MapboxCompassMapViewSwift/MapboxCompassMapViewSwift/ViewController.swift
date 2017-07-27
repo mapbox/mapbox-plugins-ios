@@ -20,16 +20,43 @@ class ViewController: UIViewController, MGLMapViewDelegate, ARSCNViewDelegate {
                                                   width: view.bounds.width / 3,
                                                   height: view.bounds.width / 3),
                                     styleURL: URL(string: "mapbox://styles/jordankiley/cj5eeueie1bsa2rp4swgcteml"))
-        //
-        //        compass.setMapViewBorderColorAndWidth(color: UIColor.black.cgColor,
-        //                                              width: 1)
-        //
+        
         compass.isMapInteractive = false
         compass.tintColor = .black
         compass.isEnlargeEnabled = true
         view.addSubview(compass)
         createSceneView()
+        setConstraints()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        self.view.layoutIfNeeded()
+        UIView.animate(withDuration: 1, animations: {
+            self.compass.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0).isActive = true
+            self.compass.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 20).isActive = true
+        })
+
+    }
+    func setConstraints() {
+        //            addConstraint(NSLayoutConstraint(item: superview, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: -20))
+        compass.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+        compass.topAnchor.constraint(equalTo: view.topAnchor, constant: 20).isActive = true
         
+        if UIDevice.current.orientation == .portrait {
+            compass.heightAnchor.constraint(
+                equalTo: view.widthAnchor,
+                multiplier: 0.33).isActive = true
+            compass.widthAnchor.constraint(
+                equalTo: view.widthAnchor,
+                multiplier: 0.33).isActive = true
+        } else {
+            compass.heightAnchor.constraint(
+                equalTo: view.heightAnchor,
+                multiplier: 0.33).isActive = true
+            compass.widthAnchor.constraint(
+                equalTo: view.heightAnchor,
+                multiplier: 0.33).isActive = true
+        }
     }
     
     func createSceneView() {
