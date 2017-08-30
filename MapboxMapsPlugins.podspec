@@ -61,15 +61,16 @@ s.social_media_url = "https://twitter.com/mapbox"
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://github.com/mapbox/mapbox-plugins-ios.git"
+  s.source       = { :git => "http://github.com/mapbox/mapbox-plugins-ios.git", :branch => "traffic-plugin" }
 
-  s.subspec 'Core' do |core|
+  s.subspec 'PluginKit' do |core|
     core.source_files  = 'PluginKit/*.h'
-    core.dependency "Mapbox-iOS-SDK", "~> 3.6"
+    core.dependency 'Mapbox-iOS-SDK', "~> 3.6"
   end
 
   s.subspec 'Traffic' do |traffic|
-    traffic.dependency 'MapboxMapsPlugins/Core'
+    traffic.source_files = 'TrafficPlugin/*.{h,m}'
+    traffic.dependency 'MapboxMapsPlugins/PluginKit'
   end
 
 end
