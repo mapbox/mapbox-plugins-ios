@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EEB5A7F1F4F7F6A008E73B6 /* MBXTrafficPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB5A7E1F4F7F6A008E73B6 /* MBXTrafficPlugin.m */; };
+		3EEB5A821F4F8081008E73B6 /* MGLStyleLayer+MBXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB5A811F4F8081008E73B6 /* MGLStyleLayer+MBXAdditions.m */; };
 		DA8805671ED342F0000CB4A8 /* LocalizationPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = DA8805651ED342F0000CB4A8 /* LocalizationPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA88056A1ED342F0000CB4A8 /* LocalizationPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8805631ED342F0000CB4A8 /* LocalizationPlugin.framework */; };
 		DA88056B1ED342F0000CB4A8 /* LocalizationPlugin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA8805631ED342F0000CB4A8 /* LocalizationPlugin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -70,6 +72,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3EEB5A7D1F4F7F6A008E73B6 /* MBXTrafficPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBXTrafficPlugin.h; sourceTree = "<group>"; };
+		3EEB5A7E1F4F7F6A008E73B6 /* MBXTrafficPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBXTrafficPlugin.m; sourceTree = "<group>"; };
+		3EEB5A801F4F8081008E73B6 /* MGLStyleLayer+MBXAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MGLStyleLayer+MBXAdditions.h"; sourceTree = "<group>"; };
+		3EEB5A811F4F8081008E73B6 /* MGLStyleLayer+MBXAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MGLStyleLayer+MBXAdditions.m"; sourceTree = "<group>"; };
 		DA8805631ED342F0000CB4A8 /* LocalizationPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LocalizationPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8805651ED342F0000CB4A8 /* LocalizationPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalizationPlugin.h; sourceTree = "<group>"; };
 		DA8805661ED342F0000CB4A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -125,6 +131,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3EEB5A7C1F4F7ED9008E73B6 /* TrafficPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				3EEB5A7D1F4F7F6A008E73B6 /* MBXTrafficPlugin.h */,
+				3EEB5A7E1F4F7F6A008E73B6 /* MBXTrafficPlugin.m */,
+				3EEB5A801F4F8081008E73B6 /* MGLStyleLayer+MBXAdditions.h */,
+				3EEB5A811F4F8081008E73B6 /* MGLStyleLayer+MBXAdditions.m */,
+			);
+			name = TrafficPlugin;
+			path = Funhouse;
+			sourceTree = "<group>";
+		};
 		DA8805641ED342F0000CB4A8 /* LocalizationPlugin */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +178,7 @@
 			children = (
 				DAF50B251ECA15B50044B316 /* TestApp */,
 				DA8805641ED342F0000CB4A8 /* LocalizationPlugin */,
+				3EEB5A7C1F4F7ED9008E73B6 /* TrafficPlugin */,
 				DA8805791ED34744000CB4A8 /* PluginKit */,
 				DAF50B241ECA15B50044B316 /* Products */,
 				DA88058C1ED3950D000CB4A8 /* Frameworks */,
@@ -275,6 +294,7 @@
 				DAF50B211ECA15B50044B316 /* Resources */,
 				DA88056F1ED342F0000CB4A8 /* Embed Frameworks */,
 				DA8805901ED39532000CB4A8 /* Copy Frameworks */,
+				3E0EC6281F55D2D8006BC03F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -353,6 +373,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3E0EC6281F55D2D8006BC03F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/insert-mapbox-token.sh";
+		};
 		DA8805901ED39532000CB4A8 /* Copy Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -406,10 +439,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EEB5A821F4F8081008E73B6 /* MGLStyleLayer+MBXAdditions.m in Sources */,
 				DAF50B2B1ECA15B50044B316 /* AppDelegate.m in Sources */,
 				DA88058A1ED34CD2000CB4A8 /* PluginTableViewController.m in Sources */,
 				DAF50B2E1ECA15B50044B316 /* MasterViewController.m in Sources */,
 				DAF50B281ECA15B50044B316 /* main.m in Sources */,
+				3EEB5A7F1F4F7F6A008E73B6 /* MBXTrafficPlugin.m in Sources */,
 				DAF50B311ECA15B50044B316 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

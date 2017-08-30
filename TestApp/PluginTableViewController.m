@@ -2,6 +2,7 @@
 
 static const NSString *PluginClassNames[] = {
     @"MBXLocalizationPlugin",
+    @"MBXTrafficPlugin",
 };
 
 NSString *DisplayNameForPluginClassName(NSString *pluginClassName) {
