@@ -16,7 +16,11 @@ There are main three ways to install Mapbox Maps Plugins:
 
 ## Using Test App
 
-Test out Mapbox Maps Plugins in the TestApp. Add your [Mapbox Access token](https://www.mapbox.com/help/how-access-tokens-work/) to the `mapbox_access_token` file and run `carthage bootstrap` to get started.
+Test out Mapbox Maps Plugins in the TestApp.
+
+1.  Run `carthage bootstrap` to install the Mapbox iOS SDK.
+
+2. Create a text file called `mapbox_access_token` and add your [Mapbox Access token](https://www.mapbox.com/help/how-access-tokens-work/) to it.
 
 ## Getting Started with the Traffic Plugin
 
