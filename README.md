@@ -21,15 +21,15 @@ Once you have added the plugins library to your project, import it to your proje
 
 Because these methods use the Runtime Styling API, the earliest that they can be called is in `[-mapView:didFinishLoadingStyle:](https://www.mapbox.com/ios-sdk/api/3.6.2/Protocols/MGLMapViewDelegate.html#/c:objc(pl)MGLMapViewDelegate(im)mapView:didFinishLoadingStyle:)`.
 
-    `- (void)addToMapView:(MGLMapView *)mapView;`
+    - (void)addToMapView:(MGLMapView *)mapView;
 
 Add traffic to a MGLMapView. This method inserts the traffic layer below places of interest with a scale rank of 3 (POIs that either have a small area or are generally acknowledged to cover large areas, i.e. hospitals and universities). See the [Mapbox Vector Tile Source layer reference](https://www.mapbox.com/vector-tiles/mapbox-streets-v7/#layer-reference) for more information about vector tile layers.
 
-    `- (void)addToMapView:(MGLMapView *)mapView below:(MGLStyleLayer *)symbolLayer;`
+    - (void)addToMapView:(MGLMapView *)mapView below:(MGLStyleLayer *)symbolLayer;
 
 Insert the traffic layers below a specific layer that has already been added to your map’s style.
 
-    `- (void)removeFromMapView:(MGLMapView *)mapView;`
+    - (void)removeFromMapView:(MGLMapView *)mapView;
 
 Removes all traffic layers from the map.
 
