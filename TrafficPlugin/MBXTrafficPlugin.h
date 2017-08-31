@@ -9,5 +9,7 @@
 
 - (void)addToMapView:(MGLMapView *)mapView below:(MGLStyleLayer *)symbolLayer;
 
+- (void)addToMapView:(MGLMapView *)mapView above:(MGLStyleLayer *)layer;
+
 - (void)removeFromMapView:(MGLMapView *)mapView;
 @end

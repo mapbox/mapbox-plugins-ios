@@ -9,6 +9,8 @@
 
 @implementation MBXTrafficPlugin
 
+// TODO: Add methods to insert traffic above layer. - Change layer group methods to have a placement parameter, then call them in the addToMapView above/below methods
+
 // Default method to add traffic layers
 - (void)addToMapView:(MGLMapView *)mapView {
     MGLSymbolStyleLayer *symbolLayer = [mapView.style layerWithIdentifier:@"poi-scalerank3"];
