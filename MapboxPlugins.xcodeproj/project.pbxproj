@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3E0EC62B1F5779C5006BC03F /* MBXTrafficPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0EC6291F5779C5006BC03F /* MBXTrafficPlugin.m */; };
-		3EEB5A821F4F8081008E73B6 /* MGLStyleLayer+MBXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB5A811F4F8081008E73B6 /* MGLStyleLayer+MBXAdditions.m */; };
 		DA8805671ED342F0000CB4A8 /* LocalizationPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = DA8805651ED342F0000CB4A8 /* LocalizationPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA88056A1ED342F0000CB4A8 /* LocalizationPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8805631ED342F0000CB4A8 /* LocalizationPlugin.framework */; };
 		DA88056B1ED342F0000CB4A8 /* LocalizationPlugin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA8805631ED342F0000CB4A8 /* LocalizationPlugin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -75,8 +74,6 @@
 		3E0EC6291F5779C5006BC03F /* MBXTrafficPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBXTrafficPlugin.m; path = TrafficPlugin/MBXTrafficPlugin.m; sourceTree = SOURCE_ROOT; };
 		3E0EC62A1F5779C5006BC03F /* MBXTrafficPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBXTrafficPlugin.h; path = TrafficPlugin/MBXTrafficPlugin.h; sourceTree = SOURCE_ROOT; };
 		3E0EC62D1F577BBE006BC03F /* MBXPlugin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBXPlugin-Bridging-Header.h"; sourceTree = "<group>"; };
-		3EEB5A801F4F8081008E73B6 /* MGLStyleLayer+MBXAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MGLStyleLayer+MBXAdditions.h"; sourceTree = "<group>"; };
-		3EEB5A811F4F8081008E73B6 /* MGLStyleLayer+MBXAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MGLStyleLayer+MBXAdditions.m"; sourceTree = "<group>"; };
 		DA8805631ED342F0000CB4A8 /* LocalizationPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LocalizationPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8805651ED342F0000CB4A8 /* LocalizationPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalizationPlugin.h; sourceTree = "<group>"; };
 		DA8805661ED342F0000CB4A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -137,8 +134,6 @@
 			children = (
 				3E0EC62A1F5779C5006BC03F /* MBXTrafficPlugin.h */,
 				3E0EC6291F5779C5006BC03F /* MBXTrafficPlugin.m */,
-				3EEB5A801F4F8081008E73B6 /* MGLStyleLayer+MBXAdditions.h */,
-				3EEB5A811F4F8081008E73B6 /* MGLStyleLayer+MBXAdditions.m */,
 			);
 			name = TrafficPlugin;
 			path = Funhouse;
@@ -441,7 +436,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EEB5A821F4F8081008E73B6 /* MGLStyleLayer+MBXAdditions.m in Sources */,
 				DAF50B2B1ECA15B50044B316 /* AppDelegate.m in Sources */,
 				3E0EC62B1F5779C5006BC03F /* MBXTrafficPlugin.m in Sources */,
 				DA88058A1ED34CD2000CB4A8 /* PluginTableViewController.m in Sources */,

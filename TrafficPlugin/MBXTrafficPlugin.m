@@ -18,7 +18,7 @@
     [self addToMapView:mapView below:symbolLayer];
 }
 
-// Insert layers below a spec
+// Insert layers below a specific layer.
 - (void)addToMapView:(MGLMapView *)mapView below:(MGLStyleLayer *)layer {
     // Add traffic source to map style.
     _source = [[MGLVectorSource alloc] initWithIdentifier:@"traffic-source" configurationURL:[NSURL URLWithString:@"mapbox://mapbox.mapbox-traffic-v1"]];

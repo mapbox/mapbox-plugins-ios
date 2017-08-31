@@ -26,10 +26,10 @@ The earliest that this method can be called is in `-mapView:didFinishLoadingStyl
 
 
 /**
- <#Description#>
+ Insert the traffic layers above a specific layer that has already been added to your map’s style.
 
- @param mapView <#mapView description#>
- @param layer <#layer description#>
+ @param mapView The map view that traffic will be displayed on.
+ @param layer The style layer that traffic will be inserted below. Use the `layers` property on a style to verify layer identifiers.
  */
 - (void)addToMapView:(MGLMapView *)mapView above:(MGLStyleLayer *)layer;
 
