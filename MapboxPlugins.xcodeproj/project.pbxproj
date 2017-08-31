@@ -74,6 +74,7 @@
 		3E0EC6291F5779C5006BC03F /* MBXTrafficPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBXTrafficPlugin.m; path = TrafficPlugin/MBXTrafficPlugin.m; sourceTree = SOURCE_ROOT; };
 		3E0EC62A1F5779C5006BC03F /* MBXTrafficPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBXTrafficPlugin.h; path = TrafficPlugin/MBXTrafficPlugin.h; sourceTree = SOURCE_ROOT; };
 		3E0EC62D1F577BBE006BC03F /* MBXPlugin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBXPlugin-Bridging-Header.h"; sourceTree = "<group>"; };
+		3E45FEBC1F588709001EB296 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA8805631ED342F0000CB4A8 /* LocalizationPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LocalizationPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8805651ED342F0000CB4A8 /* LocalizationPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalizationPlugin.h; sourceTree = "<group>"; };
 		DA8805661ED342F0000CB4A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,7 +99,6 @@
 		DAF50B331ECA15B50044B316 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAF50B351ECA15B50044B316 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAF50B381ECA15B50044B316 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DAF50B3A1ECA15B50044B316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,10 +203,10 @@
 				DAF50B301ECA15B50044B316 /* MapViewController.m */,
 				DA8805881ED34CD2000CB4A8 /* PluginTableViewController.h */,
 				DA8805891ED34CD2000CB4A8 /* PluginTableViewController.m */,
+				3E45FEBC1F588709001EB296 /* Info.plist */,
 				DAF50B321ECA15B50044B316 /* Main.storyboard */,
 				DAF50B351ECA15B50044B316 /* Assets.xcassets */,
 				DAF50B371ECA15B50044B316 /* LaunchScreen.storyboard */,
-				DAF50B3A1ECA15B50044B316 /* Info.plist */,
 				DAF50B261ECA15B50044B316 /* Supporting Files */,
 			);
 			path = TestApp;
@@ -599,6 +599,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$/mapbox-plugins-ios/TestApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -642,6 +643,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$/mapbox-plugins-ios/TestApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -659,7 +661,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Funhouse/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TestApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mapbox.PluginFunhouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -675,7 +677,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Funhouse/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TestApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mapbox.PluginFunhouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
