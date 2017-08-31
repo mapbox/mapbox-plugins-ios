@@ -158,7 +158,7 @@
 		DAF50B1A1ECA15B50044B316 = {
 			isa = PBXGroup;
 			children = (
-				DAF50B251ECA15B50044B316 /* Funhouse */,
+				DAF50B251ECA15B50044B316 /* TestApp */,
 				DA8805641ED342F0000CB4A8 /* LocalizationPlugin */,
 				DA8805791ED34744000CB4A8 /* PluginKit */,
 				DAF50B241ECA15B50044B316 /* Products */,
@@ -176,7 +176,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DAF50B251ECA15B50044B316 /* Funhouse */ = {
+		DAF50B251ECA15B50044B316 /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
 				DAF50B291ECA15B50044B316 /* AppDelegate.h */,
@@ -193,7 +193,7 @@
 				DAF50B3A1ECA15B50044B316 /* Info.plist */,
 				DAF50B261ECA15B50044B316 /* Supporting Files */,
 			);
-			path = Funhouse;
+			path = TestApp;
 			sourceTree = "<group>";
 		};
 		DAF50B261ECA15B50044B316 /* Supporting Files */ = {
