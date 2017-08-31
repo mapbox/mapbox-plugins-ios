@@ -7,17 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DA8805671ED342F0000CB4A8 /* LocalizationPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = DA8805651ED342F0000CB4A8 /* LocalizationPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA88056A1ED342F0000CB4A8 /* LocalizationPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8805631ED342F0000CB4A8 /* LocalizationPlugin.framework */; };
 		DA88056B1ED342F0000CB4A8 /* LocalizationPlugin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA8805631ED342F0000CB4A8 /* LocalizationPlugin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DA8805721ED34361000CB4A8 /* MBXLocalizationPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = DA8805701ED34361000CB4A8 /* MBXLocalizationPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DA8805731ED34361000CB4A8 /* MBXLocalizationPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8805711ED34361000CB4A8 /* MBXLocalizationPlugin.m */; };
 		DA88057D1ED34744000CB4A8 /* MapboxPluginKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DA88057A1ED34744000CB4A8 /* MapboxPluginKit.h */; };
 		DA8805861ED34868000CB4A8 /* MBXPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = DA8805811ED34787000CB4A8 /* MBXPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA88058A1ED34CD2000CB4A8 /* PluginTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8805891ED34CD2000CB4A8 /* PluginTableViewController.m */; };
 		DA8805961ED3D195000CB4A8 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8805951ED3D195000CB4A8 /* Mapbox.framework */; };
-		DADBBE831EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DADBBE811EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.h */; };
-		DADBBE841EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DADBBE821EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.m */; };
 		DADBBE861EDDF904009F8AC8 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8805951ED3D195000CB4A8 /* Mapbox.framework */; };
 		DAF50B281ECA15B50044B316 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF50B271ECA15B50044B316 /* main.m */; };
 		DAF50B2B1ECA15B50044B316 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF50B2A1ECA15B50044B316 /* AppDelegate.m */; };
@@ -71,18 +66,12 @@
 
 /* Begin PBXFileReference section */
 		DA8805631ED342F0000CB4A8 /* LocalizationPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LocalizationPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA8805651ED342F0000CB4A8 /* LocalizationPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalizationPlugin.h; sourceTree = "<group>"; };
-		DA8805661ED342F0000CB4A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA8805701ED34361000CB4A8 /* MBXLocalizationPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBXLocalizationPlugin.h; sourceTree = "<group>"; };
-		DA8805711ED34361000CB4A8 /* MBXLocalizationPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBXLocalizationPlugin.m; sourceTree = "<group>"; };
 		DA8805781ED34744000CB4A8 /* libMapboxPluginKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMapboxPluginKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA88057A1ED34744000CB4A8 /* MapboxPluginKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapboxPluginKit.h; sourceTree = "<group>"; };
 		DA8805811ED34787000CB4A8 /* MBXPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBXPlugin.h; sourceTree = "<group>"; };
 		DA8805881ED34CD2000CB4A8 /* PluginTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PluginTableViewController.h; sourceTree = "<group>"; };
 		DA8805891ED34CD2000CB4A8 /* PluginTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PluginTableViewController.m; sourceTree = "<group>"; };
 		DA8805951ED3D195000CB4A8 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = Carthage/Build/iOS/Mapbox.framework; sourceTree = "<group>"; };
-		DADBBE811EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MGLVectorSource+MBXAdditions.h"; sourceTree = "<group>"; };
-		DADBBE821EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MGLVectorSource+MBXAdditions.m"; sourceTree = "<group>"; };
 		DAF50B231ECA15B50044B316 /* Funhouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Funhouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF50B271ECA15B50044B316 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DAF50B291ECA15B50044B316 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -125,19 +114,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DA8805641ED342F0000CB4A8 /* LocalizationPlugin */ = {
-			isa = PBXGroup;
-			children = (
-				DA8805651ED342F0000CB4A8 /* LocalizationPlugin.h */,
-				DA8805701ED34361000CB4A8 /* MBXLocalizationPlugin.h */,
-				DA8805711ED34361000CB4A8 /* MBXLocalizationPlugin.m */,
-				DADBBE811EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.h */,
-				DADBBE821EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.m */,
-				DA8805661ED342F0000CB4A8 /* Info.plist */,
-			);
-			path = LocalizationPlugin;
-			sourceTree = "<group>";
-		};
 		DA8805791ED34744000CB4A8 /* PluginKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				DAF50B251ECA15B50044B316 /* TestApp */,
-				DA8805641ED342F0000CB4A8 /* LocalizationPlugin */,
 				DA8805791ED34744000CB4A8 /* PluginKit */,
 				DAF50B241ECA15B50044B316 /* Products */,
 				DA88058C1ED3950D000CB4A8 /* Frameworks */,
@@ -211,9 +186,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA8805721ED34361000CB4A8 /* MBXLocalizationPlugin.h in Headers */,
-				DADBBE831EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.h in Headers */,
-				DA8805671ED342F0000CB4A8 /* LocalizationPlugin.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,8 +362,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DADBBE841EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.m in Sources */,
-				DA8805731ED34361000CB4A8 /* MBXLocalizationPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
