@@ -72,19 +72,14 @@
 		3E0EC62A1F5779C5006BC03F /* MBXTrafficPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBXTrafficPlugin.h; path = TrafficPlugin/MBXTrafficPlugin.h; sourceTree = SOURCE_ROOT; };
 		3E0EC62D1F577BBE006BC03F /* MBXPlugin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBXPlugin-Bridging-Header.h"; sourceTree = "<group>"; };
 		3E45FEBC1F588709001EB296 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E4BC9521F5F32360015CF25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = LocalizationPlugin/Info.plist; sourceTree = SOURCE_ROOT; };
 		DA8805631ED342F0000CB4A8 /* TrafficPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TrafficPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA8805651ED342F0000CB4A8 /* LocalizationPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalizationPlugin.h; sourceTree = "<group>"; };
-		DA8805661ED342F0000CB4A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA8805701ED34361000CB4A8 /* MBXLocalizationPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBXLocalizationPlugin.h; sourceTree = "<group>"; };
-		DA8805711ED34361000CB4A8 /* MBXLocalizationPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBXLocalizationPlugin.m; sourceTree = "<group>"; };
 		DA8805781ED34744000CB4A8 /* libMapboxPluginKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMapboxPluginKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA88057A1ED34744000CB4A8 /* MapboxPluginKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapboxPluginKit.h; sourceTree = "<group>"; };
 		DA8805811ED34787000CB4A8 /* MBXPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBXPlugin.h; sourceTree = "<group>"; };
 		DA8805881ED34CD2000CB4A8 /* PluginTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PluginTableViewController.h; sourceTree = "<group>"; };
 		DA8805891ED34CD2000CB4A8 /* PluginTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PluginTableViewController.m; sourceTree = "<group>"; };
 		DA8805951ED3D195000CB4A8 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = Carthage/Build/iOS/Mapbox.framework; sourceTree = "<group>"; };
-		DADBBE811EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MGLVectorSource+MBXAdditions.h"; sourceTree = "<group>"; };
-		DADBBE821EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MGLVectorSource+MBXAdditions.m"; sourceTree = "<group>"; };
 		DAF50B231ECA15B50044B316 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF50B271ECA15B50044B316 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DAF50B291ECA15B50044B316 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -131,22 +126,10 @@
 			children = (
 				3E0EC62A1F5779C5006BC03F /* MBXTrafficPlugin.h */,
 				3E0EC6291F5779C5006BC03F /* MBXTrafficPlugin.m */,
+				3E4BC9521F5F32360015CF25 /* Info.plist */,
 			);
 			name = TrafficPlugin;
 			path = Funhouse;
-			sourceTree = "<group>";
-		};
-		DA8805641ED342F0000CB4A8 /* LocalizationPlugin */ = {
-			isa = PBXGroup;
-			children = (
-				DA8805651ED342F0000CB4A8 /* LocalizationPlugin.h */,
-				DA8805701ED34361000CB4A8 /* MBXLocalizationPlugin.h */,
-				DA8805711ED34361000CB4A8 /* MBXLocalizationPlugin.m */,
-				DADBBE811EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.h */,
-				DADBBE821EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.m */,
-				DA8805661ED342F0000CB4A8 /* Info.plist */,
-			);
-			path = LocalizationPlugin;
 			sourceTree = "<group>";
 		};
 		DA8805791ED34744000CB4A8 /* PluginKit */ = {
@@ -171,7 +154,6 @@
 			isa = PBXGroup;
 			children = (
 				DAF50B251ECA15B50044B316 /* TestApp */,
-				DA8805641ED342F0000CB4A8 /* LocalizationPlugin */,
 				3EEB5A7C1F4F7ED9008E73B6 /* TrafficPlugin */,
 				DA8805791ED34744000CB4A8 /* PluginKit */,
 				DAF50B241ECA15B50044B316 /* Products */,

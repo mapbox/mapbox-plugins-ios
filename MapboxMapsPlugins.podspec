@@ -71,6 +71,7 @@ s.social_media_url = "https://twitter.com/mapbox"
   s.subspec 'Traffic' do |traffic|
     traffic.source_files = 'TrafficPlugin/*.{h,m}'
     traffic.dependency 'MapboxMapsPlugins/PluginKit'
+    traffic.vendored_frameworks = 'TrafficPlugin.framework'
   end
 
 end
