@@ -72,3 +72,30 @@ Removes all traffic layers from the map.
         }
     }
 ```
+
+### Objective-C
+
+```objc
+#import "ViewController.h"
+#import <MapboxMapsPlugins/MBXTrafficPlugin.h>
+
+@interface ViewController () <MGLMapViewDelegate>
+
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+    MGLMapView *mapView = [[MGLMapView alloc] initWithFrame: self.view.bounds styleURL:[MGLStyle lightStyleURLWithVersion:9]];
+    [mapView setCenterCoordinate: CLLocationCoordinate2DMake(39.9612, -82.9988) zoomLevel:11 animated:NO];
+    mapView.delegate = self;
+    [self.view addSubview: mapView];
+}
+
+- (void)mapView:(MGLMapView *)mapView didFinishLoadingStyle:(MGLStyle *)style {
+    MBXTrafficPlugin *traffic = [[MBXTrafficPlugin alloc] init];
+    [traffic addToMapView:mapView];
+}
+```

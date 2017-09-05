@@ -9,11 +9,10 @@
 
 @implementation MBXTrafficPlugin
 
-// TODO: Add methods to insert traffic above layer. - Change layer group methods to have a placement parameter, then call them in the addToMapView above/below methods
 
 // Default method to add traffic layers
 - (void)addToMapView:(MGLMapView *)mapView {
-    MGLSymbolStyleLayer *symbolLayer = [mapView.style layerWithIdentifier:@"poi-scalerank3"];
+    MGLSymbolStyleLayer *symbolLayer = (MGLSymbolStyleLayer *)[mapView.style layerWithIdentifier:@"poi-scalerank3"];
     
     [self addToMapView:mapView below:symbolLayer];
 }
@@ -24,7 +23,6 @@
     [self setupPropertiesFor:mapView];
     
     // Consolidate to one layer once lineWidth supports DDS.
-    // TODO: JK - Rename these methods. Method naming is hard.
     [self addMotorwayLayerTo:mapView below:YES style:layer];
     [self addPrimaryLayerTo:mapView below:YES style:layer];
     [self addStreetLayerTo:mapView below:YES style:layer];
@@ -35,7 +33,6 @@
     [self setupPropertiesFor:mapView];
     
     // Consolidate to one layer once lineWidth supports DDS.
-    // TODO: JK - Rename these methods. Method naming is hard.
     [self addMotorwayLayerTo:mapView below:NO style:layer];
     [self addPrimaryLayerTo:mapView below:NO style:layer];
     [self addStreetLayerTo:mapView below:NO style:layer];
@@ -69,7 +66,7 @@
     _trafficColor = [MGLStyleValue valueWithInterpolationMode:MGLInterpolationModeCategorical sourceStops:stopsDictionary attributeName:@"congestion" options:@{MGLStyleFunctionOptionDefaultValue : [MGLStyleValue valueWithRawValue:[UIColor greenColor]]}];
 }
 
-// MARK: Individual layers
+// MARK: Add three traffic layers
 // Adds motorway, motorway-link, and trunk layer.
 - (void)addMotorwayLayerTo:(MGLMapView *)mapView below:(BOOL)below style:(MGLStyleLayer *)layer {
     

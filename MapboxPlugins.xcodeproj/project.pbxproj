@@ -8,17 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		3E0EC62B1F5779C5006BC03F /* MBXTrafficPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0EC6291F5779C5006BC03F /* MBXTrafficPlugin.m */; };
-		DA8805671ED342F0000CB4A8 /* LocalizationPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = DA8805651ED342F0000CB4A8 /* LocalizationPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DA88056A1ED342F0000CB4A8 /* LocalizationPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8805631ED342F0000CB4A8 /* LocalizationPlugin.framework */; };
-		DA88056B1ED342F0000CB4A8 /* LocalizationPlugin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA8805631ED342F0000CB4A8 /* LocalizationPlugin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DA8805721ED34361000CB4A8 /* MBXLocalizationPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = DA8805701ED34361000CB4A8 /* MBXLocalizationPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DA8805731ED34361000CB4A8 /* MBXLocalizationPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8805711ED34361000CB4A8 /* MBXLocalizationPlugin.m */; };
+		3E4BC9501F5F303B0015CF25 /* MBXTrafficPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E0EC62A1F5779C5006BC03F /* MBXTrafficPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3E4BC9511F5F30530015CF25 /* MBXTrafficPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0EC6291F5779C5006BC03F /* MBXTrafficPlugin.m */; };
+		DA88056A1ED342F0000CB4A8 /* TrafficPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8805631ED342F0000CB4A8 /* TrafficPlugin.framework */; };
+		DA88056B1ED342F0000CB4A8 /* TrafficPlugin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA8805631ED342F0000CB4A8 /* TrafficPlugin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA88057D1ED34744000CB4A8 /* MapboxPluginKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DA88057A1ED34744000CB4A8 /* MapboxPluginKit.h */; };
 		DA8805861ED34868000CB4A8 /* MBXPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = DA8805811ED34787000CB4A8 /* MBXPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA88058A1ED34CD2000CB4A8 /* PluginTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8805891ED34CD2000CB4A8 /* PluginTableViewController.m */; };
 		DA8805961ED3D195000CB4A8 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8805951ED3D195000CB4A8 /* Mapbox.framework */; };
-		DADBBE831EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DADBBE811EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.h */; };
-		DADBBE841EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DADBBE821EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.m */; };
 		DADBBE861EDDF904009F8AC8 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8805951ED3D195000CB4A8 /* Mapbox.framework */; };
 		DAF50B281ECA15B50044B316 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF50B271ECA15B50044B316 /* main.m */; };
 		DAF50B2B1ECA15B50044B316 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF50B2A1ECA15B50044B316 /* AppDelegate.m */; };
@@ -53,7 +50,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DA88056B1ED342F0000CB4A8 /* LocalizationPlugin.framework in Embed Frameworks */,
+				DA88056B1ED342F0000CB4A8 /* TrafficPlugin.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,7 +72,7 @@
 		3E0EC62A1F5779C5006BC03F /* MBXTrafficPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBXTrafficPlugin.h; path = TrafficPlugin/MBXTrafficPlugin.h; sourceTree = SOURCE_ROOT; };
 		3E0EC62D1F577BBE006BC03F /* MBXPlugin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBXPlugin-Bridging-Header.h"; sourceTree = "<group>"; };
 		3E45FEBC1F588709001EB296 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA8805631ED342F0000CB4A8 /* LocalizationPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LocalizationPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA8805631ED342F0000CB4A8 /* TrafficPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TrafficPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8805651ED342F0000CB4A8 /* LocalizationPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalizationPlugin.h; sourceTree = "<group>"; };
 		DA8805661ED342F0000CB4A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA8805701ED34361000CB4A8 /* MBXLocalizationPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBXLocalizationPlugin.h; sourceTree = "<group>"; };
@@ -88,7 +85,7 @@
 		DA8805951ED3D195000CB4A8 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = Carthage/Build/iOS/Mapbox.framework; sourceTree = "<group>"; };
 		DADBBE811EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MGLVectorSource+MBXAdditions.h"; sourceTree = "<group>"; };
 		DADBBE821EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MGLVectorSource+MBXAdditions.m"; sourceTree = "<group>"; };
-		DAF50B231ECA15B50044B316 /* Funhouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Funhouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAF50B231ECA15B50044B316 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF50B271ECA15B50044B316 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DAF50B291ECA15B50044B316 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DAF50B2A1ECA15B50044B316 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -121,7 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA88056A1ED342F0000CB4A8 /* LocalizationPlugin.framework in Frameworks */,
+				DA88056A1ED342F0000CB4A8 /* TrafficPlugin.framework in Frameworks */,
 				DA8805961ED3D195000CB4A8 /* Mapbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,8 +182,8 @@
 		DAF50B241ECA15B50044B316 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DAF50B231ECA15B50044B316 /* Funhouse.app */,
-				DA8805631ED342F0000CB4A8 /* LocalizationPlugin.framework */,
+				DAF50B231ECA15B50044B316 /* TestApp.app */,
+				DA8805631ED342F0000CB4A8 /* TrafficPlugin.framework */,
 				DA8805781ED34744000CB4A8 /* libMapboxPluginKit.a */,
 			);
 			name = Products;
@@ -227,9 +224,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA8805721ED34361000CB4A8 /* MBXLocalizationPlugin.h in Headers */,
-				DADBBE831EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.h in Headers */,
-				DA8805671ED342F0000CB4A8 /* LocalizationPlugin.h in Headers */,
+				3E4BC9501F5F303B0015CF25 /* MBXTrafficPlugin.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,9 +239,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		DA8805621ED342F0000CB4A8 /* LocalizationPlugin */ = {
+		DA8805621ED342F0000CB4A8 /* TrafficPlugin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DA88056E1ED342F0000CB4A8 /* Build configuration list for PBXNativeTarget "LocalizationPlugin" */;
+			buildConfigurationList = DA88056E1ED342F0000CB4A8 /* Build configuration list for PBXNativeTarget "TrafficPlugin" */;
 			buildPhases = (
 				DA88055E1ED342F0000CB4A8 /* Sources */,
 				DA88055F1ED342F0000CB4A8 /* Frameworks */,
@@ -259,9 +254,9 @@
 			dependencies = (
 				DA8805921ED3CEC3000CB4A8 /* PBXTargetDependency */,
 			);
-			name = LocalizationPlugin;
+			name = TrafficPlugin;
 			productName = LocalizationPlugin;
-			productReference = DA8805631ED342F0000CB4A8 /* LocalizationPlugin.framework */;
+			productReference = DA8805631ED342F0000CB4A8 /* TrafficPlugin.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		DA8805771ED34744000CB4A8 /* PluginKit */ = {
@@ -282,9 +277,9 @@
 			productReference = DA8805781ED34744000CB4A8 /* libMapboxPluginKit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		DAF50B221ECA15B50044B316 /* Funhouse */ = {
+		DAF50B221ECA15B50044B316 /* TestApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DAF50B3D1ECA15B50044B316 /* Build configuration list for PBXNativeTarget "Funhouse" */;
+			buildConfigurationList = DAF50B3D1ECA15B50044B316 /* Build configuration list for PBXNativeTarget "TestApp" */;
 			buildPhases = (
 				DAF50B1F1ECA15B50044B316 /* Sources */,
 				DAF50B201ECA15B50044B316 /* Frameworks */,
@@ -298,9 +293,9 @@
 			dependencies = (
 				DA8805691ED342F0000CB4A8 /* PBXTargetDependency */,
 			);
-			name = Funhouse;
+			name = TestApp;
 			productName = MapboxPlugins;
-			productReference = DAF50B231ECA15B50044B316 /* Funhouse.app */;
+			productReference = DAF50B231ECA15B50044B316 /* TestApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -342,9 +337,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DAF50B221ECA15B50044B316 /* Funhouse */,
+				DAF50B221ECA15B50044B316 /* TestApp */,
 				DA8805771ED34744000CB4A8 /* PluginKit */,
-				DA8805621ED342F0000CB4A8 /* LocalizationPlugin */,
+				DA8805621ED342F0000CB4A8 /* TrafficPlugin */,
 			);
 		};
 /* End PBXProject section */
@@ -420,8 +415,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DADBBE841EDDF845009F8AC8 /* MGLVectorSource+MBXAdditions.m in Sources */,
-				DA8805731ED34361000CB4A8 /* MBXLocalizationPlugin.m in Sources */,
+				3E4BC9511F5F30530015CF25 /* MBXTrafficPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,7 +444,7 @@
 /* Begin PBXTargetDependency section */
 		DA8805691ED342F0000CB4A8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DA8805621ED342F0000CB4A8 /* LocalizationPlugin */;
+			target = DA8805621ED342F0000CB4A8 /* TrafficPlugin */;
 			targetProxy = DA8805681ED342F0000CB4A8 /* PBXContainerItemProxy */;
 		};
 		DA8805921ED3CEC3000CB4A8 /* PBXTargetDependency */ = {
@@ -497,7 +491,7 @@
 				INFOPLIST_FILE = LocalizationPlugin/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mapbox.LocalizationPlugin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mapbox.TrafficPlugin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -522,7 +516,7 @@
 				INFOPLIST_FILE = LocalizationPlugin/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mapbox.LocalizationPlugin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mapbox.TrafficPlugin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -663,7 +657,7 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/TestApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mapbox.PluginFunhouse;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mapbox.PluginTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -679,7 +673,7 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/TestApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mapbox.PluginFunhouse;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mapbox.PluginTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -687,7 +681,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DA88056E1ED342F0000CB4A8 /* Build configuration list for PBXNativeTarget "LocalizationPlugin" */ = {
+		DA88056E1ED342F0000CB4A8 /* Build configuration list for PBXNativeTarget "TrafficPlugin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DA88056C1ED342F0000CB4A8 /* Debug */,
@@ -714,7 +708,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DAF50B3D1ECA15B50044B316 /* Build configuration list for PBXNativeTarget "Funhouse" */ = {
+		DAF50B3D1ECA15B50044B316 /* Build configuration list for PBXNativeTarget "TestApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DAF50B3E1ECA15B50044B316 /* Debug */,
