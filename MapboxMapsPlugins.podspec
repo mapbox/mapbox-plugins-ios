@@ -63,6 +63,8 @@ s.social_media_url = "https://twitter.com/mapbox"
 
   s.source       = { :git => "http://github.com/mapbox/mapbox-plugins-ios.git", :branch => "traffic-plugin" }
 
+  s.module_name = 'MapboxMapsPlugins'
+
   s.subspec 'PluginKit' do |core|
     core.source_files  = 'PluginKit/*.h'
     core.dependency 'Mapbox-iOS-SDK', "~> 3.6"
@@ -71,7 +73,7 @@ s.social_media_url = "https://twitter.com/mapbox"
   s.subspec 'Traffic' do |traffic|
     traffic.source_files = 'TrafficPlugin/*.{h,m}'
     traffic.dependency 'MapboxMapsPlugins/PluginKit'
-    traffic.vendored_frameworks = 'TrafficPlugin.framework'
+    traffic.vendored_frameworks = 'TrafficPlugin/TrafficPlugin.framework'
   end
 
 end
