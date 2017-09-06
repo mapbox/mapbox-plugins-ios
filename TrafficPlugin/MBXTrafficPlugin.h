@@ -1,7 +1,7 @@
 
 #import "MapboxPluginKit.h"
 #import <Foundation/Foundation.h>
-@import Mapbox;
+#import <Mapbox-iOS-SDK/Mapbox/Mapbox.h>;
 
 @interface MBXTrafficPlugin : NSObject <MBXPlugin>
 
