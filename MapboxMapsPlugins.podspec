@@ -45,7 +45,7 @@ s.social_media_url = "https://twitter.com/mapbox"
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  # s.platform     = :ios
+  s.platform     = :ios
   # s.platform     = :ios, "5.0"
 
   #  When using multiple platforms
@@ -61,7 +61,7 @@ s.social_media_url = "https://twitter.com/mapbox"
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://github.com/mapbox/mapbox-plugins-ios.git", :branch => "traffic-plugin" }
+  s.source       = { :git => "https://github.com/mapbox/mapbox-plugins-ios.git", :branch => "traffic-plugin" }
 
   s.module_name = 'MapboxMapsPlugins'
 
@@ -73,7 +73,6 @@ s.social_media_url = "https://twitter.com/mapbox"
   s.subspec 'Traffic' do |traffic|
     traffic.source_files = 'TrafficPlugin/*.{h,m}'
     traffic.dependency 'MapboxMapsPlugins/PluginKit'
-    traffic.vendored_frameworks = 'TrafficPlugin/TrafficPlugin.framework'
   end
 
 end
