@@ -1,5 +1,7 @@
 Adds a real-time traffic layer to your Mapbox basemap.
 
+![trafficplugin](https://user-images.githubusercontent.com/12474734/30234248-3bbe7bac-94b0-11e7-97b2-6b96a2a60c84.gif)
+
 ## Getting Started with the Traffic Plugin
 
 Once you have added the plugins library to your project, import it to your project. The traffic layers will start to become visible at zoom level 10.
