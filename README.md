@@ -5,7 +5,7 @@ Experimental plugins to supercharge your maps ⚡️
 
 There are main three ways to install Mapbox Maps Plugins:
 
-1. CocoaPods
+1. **CocoaPods**
   To install all Mapbox Maps Plugins, add the following to your Podfile:
   `pod MapboxMapsPlugins`
   To install the Mapbox Traffic Plugin, add
