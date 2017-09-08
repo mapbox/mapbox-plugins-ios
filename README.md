@@ -3,16 +3,17 @@ Experimental plugins to supercharge your maps ⚡️
 
 ## Installing Plugins
 
-There are main three ways to install Mapbox Maps Plugins:
+There are currently two ways to install Mapbox Maps Plugins:
 
 1. **CocoaPods**
+
   To install all Mapbox Maps Plugins, add the following to your Podfile:
   `pod MapboxMapsPlugins`
   To install the Mapbox Traffic Plugin, add
   `pod MapboxMapsPlugins/Traffic`
   Note that the CocoaPod does include Mapbox iOS SDK v3.6.x as a dependency, and should update to the latest patch release of v3.6 when you run `pod update`.
-2. Carthage 🤷
-3. If you prefer not to use either Carthage or CocoaPods, copy the files for the plugin that you would like to use into your project. You will need to use a bridging header if your project is written in Swift.
+
+2. If you prefer not to use CocoaPods, copy the files for the plugin that you would like to use into your project. You will need to use a bridging header if your project is written in Swift.
 
 ## Using Test App
 
@@ -26,7 +27,7 @@ Test out Mapbox Maps Plugins in the TestApp.
 
 Once you have added the plugins library to your project, import it to your project. The traffic layers will start to become visible at zoom level 10.
 
-Because these methods use the Runtime Styling API, the earliest that they can be called is in `[-mapView:didFinishLoadingStyle:](https://www.mapbox.com/ios-sdk/api/3.6.2/Protocols/MGLMapViewDelegate.html#/c:objc(pl)MGLMapViewDelegate(im)mapView:didFinishLoadingStyle:)`.
+The earliest that these methods can be called is in `[-mapView:didFinishLoadingStyle:](https://www.mapbox.com/ios-sdk/api/3.6.2/Protocols/MGLMapViewDelegate.html#/c:objc(pl)MGLMapViewDelegate(im)mapView:didFinishLoadingStyle:)`, since that is when the underlying style has finished loading and therefore can be edited.
 
     - (void)addToMapView:(MGLMapView *)mapView;
 
