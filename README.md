@@ -1,7 +1,7 @@
 # mapbox-plugins-ios
 Experimental plugins to supercharge your maps ⚡️
 
-Plugins allow users to easily add features to their Mapbox maps. Plugins are focused on one feature.
+Plugins allow users to easily add features to their Mapbox maps. Plugins are focused on one feature, and designed to be simple to use. 
 
 ## Using Test App
 
