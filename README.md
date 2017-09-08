@@ -1,6 +1,16 @@
 # mapbox-plugins-ios
 Experimental plugins to supercharge your maps ⚡️
 
+Plugins allow users to easily add features to their Mapbox maps. Plugins are focused on one feature.
+
+## Using Test App
+
+Test out Mapbox Maps Plugins in the TestApp.
+
+1. Run `carthage bootstrap` to install the Mapbox iOS SDK.
+
+2. Create a text file called `mapbox_access_token` and add your [Mapbox Access token](https://www.mapbox.com/help/how-access-tokens-work/) to it.
+
 ## Installing Plugins
 
 There are currently two ways to install Mapbox Maps Plugins:
@@ -8,26 +18,25 @@ There are currently two ways to install Mapbox Maps Plugins:
 1. **CocoaPods**
 
   To install all Mapbox Maps Plugins, add the following to your Podfile:
+```
+  target 'YourAppName' do
+  use_frameworks!
   `pod MapboxMapsPlugins`
-  To install the Mapbox Traffic Plugin, add
-  `pod MapboxMapsPlugins/Traffic`
-  Note that the CocoaPod does include Mapbox iOS SDK v3.6.x as a dependency, and should update to the latest patch release of v3.6 when you run `pod update`.
+end
+```
+
+  To install the Mapbox Traffic Plugin, add `pod MapboxMapsPlugins/Traffic` instead of `pod MapboxMapsPlugins`.
+  Note that the CocoaPod does include [Mapbox iOS SDK](https://www.mapbox.com/ios-sdk/) v3.6 as a dependency, and should update to the latest patch release of v3.6 when you run `pod update`.
 
 2. If you prefer not to use CocoaPods, copy the files for the plugin that you would like to use into your project. You will need to use a bridging header if your project is written in Swift.
 
-## Using Test App
-
-Test out Mapbox Maps Plugins in the TestApp.
-
-1.  Run `carthage bootstrap` to install the Mapbox iOS SDK.
-
-2. Create a text file called `mapbox_access_token` and add your [Mapbox Access token](https://www.mapbox.com/help/how-access-tokens-work/) to it.
+Carthage support is coming soon.
 
 ## Getting Started with the Traffic Plugin
 
 Once you have added the plugins library to your project, import it to your project. The traffic layers will start to become visible at zoom level 10.
 
-The earliest that these methods can be called is in `[-mapView:didFinishLoadingStyle:](https://www.mapbox.com/ios-sdk/api/3.6.2/Protocols/MGLMapViewDelegate.html#/c:objc(pl)MGLMapViewDelegate(im)mapView:didFinishLoadingStyle:)`, since that is when the underlying style has finished loading and therefore can be edited.
+These methods should not be called before `[the style has finished loading](https://www.mapbox.com/ios-sdk/api/3.6.2/Protocols/MGLMapViewDelegate.html#/c:objc(pl)MGLMapViewDelegate(im)mapView:didFinishLoadingStyle:)`, since that is the earliest that the style can be edited.
 
     - (void)addToMapView:(MGLMapView *)mapView;
 
@@ -100,3 +109,9 @@ Removes all traffic layers from the map.
     [traffic addToMapView:mapView];
 }
 ```
+
+## Additional Support
+
+Plugins are intended to be easy to use. If you see any issues related to Mapbox plugins, please open a ticket with steps to reproduce the issue.
+
+For questions related to the Mapbox iOS SDK, please visit https://www.mapbox.com/help/

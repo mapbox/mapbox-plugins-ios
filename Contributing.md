@@ -1,6 +1,6 @@
 # Contributing
 
-We welcome contributions to Mapbox Maps Plugins for iOS. In order to add a plugin, please open an issue. This allows us to discuss the proposal and also ensure that there isn't already work being done on that feature.
+We welcome contributions to Mapbox Maps Plugins for iOS. In order to add a plugin, please open an issue outlining the plugin. This allow contributors to discuss the proposal and also ensure that there isn't already work being done on that feature.
 
 If you are interested in reporting a bug, please open an issue that includes steps to reproduce the issue. Suggestions for how to improve existing plugins are also welcome.
 
