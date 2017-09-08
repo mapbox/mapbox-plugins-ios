@@ -36,7 +36,7 @@ Carthage support is coming soon.
 
 Once you have added the plugins library to your project, import it to your project. The traffic layers will start to become visible at zoom level 10.
 
-These methods should not be called before `[the style has finished loading](https://www.mapbox.com/ios-sdk/api/3.6.2/Protocols/MGLMapViewDelegate.html#/c:objc(pl)MGLMapViewDelegate(im)mapView:didFinishLoadingStyle:)`, since that is the earliest that the style can be edited.
+These methods should not be called before [the style has finished loading](https://www.mapbox.com/ios-sdk/api/3.6.2/Protocols/MGLMapViewDelegate.html#/c:objc(pl)MGLMapViewDelegate(im)mapView:didFinishLoadingStyle:), which is the earliest opportunity to edit the map's style.
 
     - (void)addToMapView:(MGLMapView *)mapView;
 
