@@ -1,7 +1,6 @@
 #import "PluginTableViewController.h"
 
 static const NSString *PluginClassNames[] = {
-    @"MBXLocalizationPlugin",
     @"MBXTrafficPlugin",
 };
 

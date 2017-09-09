@@ -3,12 +3,15 @@
 @interface MBXTrafficPlugin ()
 
 @property (nonatomic, retain) MGLVectorSource *source;
-@property (nonatomic, retain) MGLStyleValue *trafficColor;
+@property (nonatomic, retain) MGLStyleValue const *trafficColor;
 @property (nonatomic, retain) NSMutableArray *trafficLayerIdentifiers;
 @end
 
 @implementation MBXTrafficPlugin
 
++ (void)initialize {
+
+}
 
 // Default method to add traffic layers
 - (void)addToMapView:(MGLMapView *)mapView {
@@ -40,39 +43,42 @@
 
 - (void) setupPropertiesFor:(MGLMapView *)mapView {
     // Add traffic source to map style.
-    _source = [[MGLVectorSource alloc] initWithIdentifier:@"traffic-source" configurationURL:[NSURL URLWithString:@"mapbox://mapbox.mapbox-traffic-v1"]];
-    [mapView.style addSource:_source];
-    
-    _trafficLayerIdentifiers = [NSMutableArray new];
-    
-    NSDictionary *stopsDictionary = @{
-                                      @"low" : [MGLStyleValue valueWithRawValue:[UIColor colorWithRed:88.0/255.0
-                                                                                                green:195.0/255.0
-                                                                                                 blue:35.0/255.0
-                                                                                                alpha:1]],
-                                      @"moderate" : [MGLStyleValue valueWithRawValue:[UIColor colorWithRed:88.0/255.0
-                                                                                                     green:195.0/255.0
-                                                                                                      blue:35.0/255.0
-                                                                                                     alpha:1]],
-                                      @"heavy" : [MGLStyleValue valueWithRawValue:[UIColor colorWithRed:242.0/255.0
-                                                                                                  green:185.0/255.0
-                                                                                                   blue:15.0/255.0
-                                                                                                  alpha:1]],
-                                      @"severe" : [MGLStyleValue valueWithRawValue:[UIColor colorWithRed:204.0/255.0
-                                                                                                   green:0
-                                                                                                    blue:0
-                                                                                                   alpha:1]]
-                                      };
-    _trafficColor = [MGLStyleValue valueWithInterpolationMode:MGLInterpolationModeCategorical sourceStops:stopsDictionary attributeName:@"congestion" options:@{MGLStyleFunctionOptionDefaultValue : [MGLStyleValue valueWithRawValue:[UIColor greenColor]]}];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _source = [[MGLVectorSource alloc] initWithIdentifier:@"traffic-source" configurationURL:[NSURL URLWithString:@"mapbox://mapbox.mapbox-traffic-v1"]];
+        [mapView.style addSource:_source];
+        
+        _trafficLayerIdentifiers = [NSMutableArray new];
+        
+        NSDictionary *stopsDictionary = @{
+                                          @"low" : [MGLStyleValue valueWithRawValue:[UIColor colorWithRed:88.0/255.0
+                                                                                                    green:195.0/255.0
+                                                                                                     blue:35.0/255.0
+                                                                                                    alpha:1]],
+                                          @"moderate" : [MGLStyleValue valueWithRawValue:[UIColor colorWithRed:88.0/255.0
+                                                                                                         green:195.0/255.0
+                                                                                                          blue:35.0/255.0
+                                                                                                         alpha:1]],
+                                          @"heavy" : [MGLStyleValue valueWithRawValue:[UIColor colorWithRed:242.0/255.0
+                                                                                                      green:185.0/255.0
+                                                                                                       blue:15.0/255.0
+                                                                                                      alpha:1]],
+                                          @"severe" : [MGLStyleValue valueWithRawValue:[UIColor colorWithRed:204.0/255.0
+                                                                                                       green:0
+                                                                                                        blue:0
+                                                                                                       alpha:1]]
+                                          };
+        _trafficColor = [MGLStyleValue valueWithInterpolationMode:MGLInterpolationModeCategorical sourceStops:stopsDictionary attributeName:@"congestion" options:@{MGLStyleFunctionOptionDefaultValue : [MGLStyleValue valueWithRawValue:[UIColor greenColor]]}];
+    });
 }
 
 // MARK: Add three traffic layers
 // Adds motorway, motorway-link, and trunk layer.
 - (void)addMotorwayLayerTo:(MGLMapView *)mapView below:(BOOL)below style:(MGLStyleLayer *)layer {
     
-    MGLLineStyleLayer *motorwayLayer = [[MGLLineStyleLayer alloc] initWithIdentifier:@"motorway-layer" source:_source];
+    MGLLineStyleLayer *motorwayLayer = [[MGLLineStyleLayer alloc] initWithIdentifier:@"traffic-motorway-layer" source:_source];
     motorwayLayer.sourceLayerIdentifier = @"traffic";
-    motorwayLayer.predicate = [NSPredicate predicateWithFormat:@"class IN %@", @[@"motorway", @"motorway-link", @"trunk"]];
+    motorwayLayer.predicate = [NSPredicate predicateWithFormat:@"class IN {'motorway', 'motorway_link', 'trunk'}"];
     
     motorwayLayer.lineColor = _trafficColor;
     
@@ -97,9 +103,9 @@
 
 // Adds primary, secondary, and tertiary road layer.
 - (void)addPrimaryLayerTo:(MGLMapView *)mapView below:(BOOL)below style:(MGLStyleLayer *)layer {
-    MGLLineStyleLayer *primaryLayer = [[MGLLineStyleLayer alloc] initWithIdentifier:@"primary-layer" source:_source];
+    MGLLineStyleLayer *primaryLayer = [[MGLLineStyleLayer alloc] initWithIdentifier:@"traffic-primary-layer" source:_source];
     primaryLayer.sourceLayerIdentifier = @"traffic";
-    primaryLayer.predicate = [NSPredicate predicateWithFormat:@"class IN %@", @[@"primary", @"secondary", @"tertiary"]];
+    primaryLayer.predicate = [NSPredicate predicateWithFormat:@"class IN {'primary', 'secondary', 'tertiary'}"];
     
     NSDictionary *primaryLineStopsDictionary = @{
                                                  @11 : [MGLStyleValue valueWithRawValue:@1.25],
@@ -126,9 +132,9 @@
 
 // Adds street, service road, and link layer.
 - (void)addStreetLayerTo:(MGLMapView *)mapView below:(BOOL)below style:(MGLStyleLayer *)layer {
-    MGLLineStyleLayer *streetLayer = [[MGLLineStyleLayer alloc] initWithIdentifier:@"street-layer" source:_source];
+    MGLLineStyleLayer *streetLayer = [[MGLLineStyleLayer alloc] initWithIdentifier:@"traffic-street-layer" source:_source];
     streetLayer.sourceLayerIdentifier = @"traffic";
-    streetLayer.predicate = [NSPredicate predicateWithFormat:@"class IN { 'street', 'link', 'service' }"];
+    streetLayer.predicate = [NSPredicate predicateWithFormat:@"class IN {'street', 'link', 'service'}"];
     
     NSDictionary *streetLineStopsDictionary = @{
                                                 @11 : [MGLStyleValue valueWithRawValue:@1],
@@ -153,11 +159,11 @@
 
 // MARK: Traffic Layer Removal
 - (void)removeFromMapView:(MGLMapView *)mapView {
-    for (NSString *id in _trafficLayerIdentifiers) {
-        MGLStyleLayer *layer = [mapView.style layerWithIdentifier:id];
+    for (NSString *identifier in _trafficLayerIdentifiers) {
+        MGLStyleLayer *layer = [mapView.style layerWithIdentifier:identifier];
         [mapView.style removeLayer:layer];
     }
-    _trafficLayerIdentifiers = [NSMutableArray new];
+    _trafficLayerIdentifiers = [NSMutableArray array];
 }
 
 @end

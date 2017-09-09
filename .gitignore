@@ -6,5 +6,5 @@ xcuserdata
 *.xcuserstate
 *.xcscmblueprint
 mapbox_access_token
-
-Carthage/
+Pods
+*.xcworkspace

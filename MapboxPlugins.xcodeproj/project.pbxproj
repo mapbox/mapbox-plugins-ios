@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B0CE61E11B5AECC852262B1 /* libPods-PluginKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E804A8391EBCA17A19F6AB /* libPods-PluginKit.a */; };
+		3CCAC1DF6977DA0D057701CB /* libPods-TestApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146EAF023797AB1FEE660581 /* libPods-TestApp.a */; };
 		3E0EC62B1F5779C5006BC03F /* MBXTrafficPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0EC6291F5779C5006BC03F /* MBXTrafficPlugin.m */; };
 		3E4BC9501F5F303B0015CF25 /* MBXTrafficPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E0EC62A1F5779C5006BC03F /* MBXTrafficPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3E4BC9511F5F30530015CF25 /* MBXTrafficPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0EC6291F5779C5006BC03F /* MBXTrafficPlugin.m */; };
-		DA88056A1ED342F0000CB4A8 /* TrafficPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8805631ED342F0000CB4A8 /* TrafficPlugin.framework */; };
-		DA88056B1ED342F0000CB4A8 /* TrafficPlugin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA8805631ED342F0000CB4A8 /* TrafficPlugin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3E8BF7BB1F63655F0087C80E /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8BF7BA1F63655F0087C80E /* Mapbox.framework */; };
+		3E8BF7BC1F6367270087C80E /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8BF7BA1F63655F0087C80E /* Mapbox.framework */; };
+		3E8BF7BE1F6367270087C80E /* Mapbox.framework.dSYM in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8BF7BD1F6367270087C80E /* Mapbox.framework.dSYM */; };
 		DA88057D1ED34744000CB4A8 /* MapboxPluginKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DA88057A1ED34744000CB4A8 /* MapboxPluginKit.h */; };
 		DA8805861ED34868000CB4A8 /* MBXPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = DA8805811ED34787000CB4A8 /* MBXPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA88058A1ED34CD2000CB4A8 /* PluginTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8805891ED34CD2000CB4A8 /* PluginTableViewController.m */; };
-		DA8805961ED3D195000CB4A8 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8805951ED3D195000CB4A8 /* Mapbox.framework */; };
-		DADBBE861EDDF904009F8AC8 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8805951ED3D195000CB4A8 /* Mapbox.framework */; };
 		DAF50B281ECA15B50044B316 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF50B271ECA15B50044B316 /* main.m */; };
 		DAF50B2B1ECA15B50044B316 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF50B2A1ECA15B50044B316 /* AppDelegate.m */; };
 		DAF50B2E1ECA15B50044B316 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF50B2D1ECA15B50044B316 /* MasterViewController.m */; };
@@ -27,13 +28,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		DA8805681ED342F0000CB4A8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DAF50B1B1ECA15B50044B316 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DA8805621ED342F0000CB4A8;
-			remoteInfo = LocalizationPlugin;
-		};
 		DA8805911ED3CEC3000CB4A8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DAF50B1B1ECA15B50044B316 /* Project object */;
@@ -50,7 +44,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DA88056B1ED342F0000CB4A8 /* TrafficPlugin.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,18 +61,28 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		140228755391DBD91A6B0117 /* Pods-TestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestApp/Pods-TestApp.release.xcconfig"; sourceTree = "<group>"; };
+		146EAF023797AB1FEE660581 /* libPods-TestApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E3D2952AEF2EFC30678BC33 /* Pods-TrafficPlugin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrafficPlugin.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrafficPlugin/Pods-TrafficPlugin.release.xcconfig"; sourceTree = "<group>"; };
+		23038350B97D8048497AB0A7 /* Pods-TrafficPlugin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrafficPlugin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrafficPlugin/Pods-TrafficPlugin.debug.xcconfig"; sourceTree = "<group>"; };
 		3E0EC6291F5779C5006BC03F /* MBXTrafficPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBXTrafficPlugin.m; path = TrafficPlugin/MBXTrafficPlugin.m; sourceTree = SOURCE_ROOT; };
 		3E0EC62A1F5779C5006BC03F /* MBXTrafficPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBXTrafficPlugin.h; path = TrafficPlugin/MBXTrafficPlugin.h; sourceTree = SOURCE_ROOT; };
 		3E0EC62D1F577BBE006BC03F /* MBXPlugin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBXPlugin-Bridging-Header.h"; sourceTree = "<group>"; };
 		3E45FEBC1F588709001EB296 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E4BC9521F5F32360015CF25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = LocalizationPlugin/Info.plist; sourceTree = SOURCE_ROOT; };
+		3E8BF7BA1F63655F0087C80E /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = "Pods/Mapbox-iOS-SDK/dynamic/Mapbox.framework"; sourceTree = "<group>"; };
+		3E8BF7BD1F6367270087C80E /* Mapbox.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Mapbox.framework.dSYM; path = "Pods/Mapbox-iOS-SDK/dynamic/Mapbox.framework.dSYM"; sourceTree = "<group>"; };
+		501DF0FB86B059E1610DAD80 /* Pods-PluginKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PluginKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PluginKit/Pods-PluginKit.debug.xcconfig"; sourceTree = "<group>"; };
+		63E804A8391EBCA17A19F6AB /* libPods-PluginKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PluginKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B60D90E910B312EEAE3F074 /* Pods-PluginKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PluginKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-PluginKit/Pods-PluginKit.release.xcconfig"; sourceTree = "<group>"; };
+		92182F63EE2ED3541E52882F /* libPods-TrafficPlugin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TrafficPlugin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B647DD67A710D239904CB3D3 /* Pods-TestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestApp/Pods-TestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		DA8805631ED342F0000CB4A8 /* TrafficPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TrafficPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8805781ED34744000CB4A8 /* libMapboxPluginKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMapboxPluginKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA88057A1ED34744000CB4A8 /* MapboxPluginKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapboxPluginKit.h; sourceTree = "<group>"; };
 		DA8805811ED34787000CB4A8 /* MBXPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBXPlugin.h; sourceTree = "<group>"; };
 		DA8805881ED34CD2000CB4A8 /* PluginTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PluginTableViewController.h; sourceTree = "<group>"; };
 		DA8805891ED34CD2000CB4A8 /* PluginTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PluginTableViewController.m; sourceTree = "<group>"; };
-		DA8805951ED3D195000CB4A8 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = Carthage/Build/iOS/Mapbox.framework; sourceTree = "<group>"; };
 		DAF50B231ECA15B50044B316 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF50B271ECA15B50044B316 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DAF50B291ECA15B50044B316 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -98,7 +101,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DADBBE861EDDF904009F8AC8 /* Mapbox.framework in Frameworks */,
+				3E8BF7BE1F6367270087C80E /* Mapbox.framework.dSYM in Frameworks */,
+				3E8BF7BC1F6367270087C80E /* Mapbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B0CE61E11B5AECC852262B1 /* libPods-PluginKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,8 +118,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA88056A1ED342F0000CB4A8 /* TrafficPlugin.framework in Frameworks */,
-				DA8805961ED3D195000CB4A8 /* Mapbox.framework in Frameworks */,
+				3E8BF7BB1F63655F0087C80E /* Mapbox.framework in Frameworks */,
+				3CCAC1DF6977DA0D057701CB /* libPods-TestApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +137,19 @@
 			path = Funhouse;
 			sourceTree = "<group>";
 		};
+		D8335DC48D42E9AA12F27FCB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				501DF0FB86B059E1610DAD80 /* Pods-PluginKit.debug.xcconfig */,
+				7B60D90E910B312EEAE3F074 /* Pods-PluginKit.release.xcconfig */,
+				B647DD67A710D239904CB3D3 /* Pods-TestApp.debug.xcconfig */,
+				140228755391DBD91A6B0117 /* Pods-TestApp.release.xcconfig */,
+				23038350B97D8048497AB0A7 /* Pods-TrafficPlugin.debug.xcconfig */,
+				1E3D2952AEF2EFC30678BC33 /* Pods-TrafficPlugin.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DA8805791ED34744000CB4A8 /* PluginKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,7 +163,11 @@
 		DA88058C1ED3950D000CB4A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DA8805951ED3D195000CB4A8 /* Mapbox.framework */,
+				3E8BF7BD1F6367270087C80E /* Mapbox.framework.dSYM */,
+				3E8BF7BA1F63655F0087C80E /* Mapbox.framework */,
+				63E804A8391EBCA17A19F6AB /* libPods-PluginKit.a */,
+				146EAF023797AB1FEE660581 /* libPods-TestApp.a */,
+				92182F63EE2ED3541E52882F /* libPods-TrafficPlugin.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -158,6 +180,7 @@
 				DA8805791ED34744000CB4A8 /* PluginKit */,
 				DAF50B241ECA15B50044B316 /* Products */,
 				DA88058C1ED3950D000CB4A8 /* Frameworks */,
+				D8335DC48D42E9AA12F27FCB /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -225,11 +248,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA88056E1ED342F0000CB4A8 /* Build configuration list for PBXNativeTarget "TrafficPlugin" */;
 			buildPhases = (
+				C305DB6AC717D03F3715B86B /* [CP] Check Pods Manifest.lock */,
 				DA88055E1ED342F0000CB4A8 /* Sources */,
 				DA88055F1ED342F0000CB4A8 /* Frameworks */,
 				DA8805601ED342F0000CB4A8 /* Headers */,
 				DA8805611ED342F0000CB4A8 /* Resources */,
-				DADBBE851EDDF8EB009F8AC8 /* Copy Frameworks */,
+				385F226DE08B7A3D2D0E2243 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -245,10 +269,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA88057E1ED34744000CB4A8 /* Build configuration list for PBXNativeTarget "PluginKit" */;
 			buildPhases = (
+				BB7F798EDA73C436A9ACA9DB /* [CP] Check Pods Manifest.lock */,
 				DA8805851ED34860000CB4A8 /* Headers */,
 				DA8805741ED34744000CB4A8 /* Sources */,
 				DA8805751ED34744000CB4A8 /* Frameworks */,
 				DA8805761ED34744000CB4A8 /* CopyFiles */,
+				E907E8DB9C8EE86B5A37B039 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -263,17 +289,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DAF50B3D1ECA15B50044B316 /* Build configuration list for PBXNativeTarget "TestApp" */;
 			buildPhases = (
+				F0FD000081624D2ACDB7E44B /* [CP] Check Pods Manifest.lock */,
 				DAF50B1F1ECA15B50044B316 /* Sources */,
 				DAF50B201ECA15B50044B316 /* Frameworks */,
 				DAF50B211ECA15B50044B316 /* Resources */,
 				DA88056F1ED342F0000CB4A8 /* Embed Frameworks */,
-				DA8805901ED39532000CB4A8 /* Copy Frameworks */,
 				3E0EC6281F55D2D8006BC03F /* ShellScript */,
+				63461F0760B0C175CD32FA7D /* [CP] Embed Pods Frameworks */,
+				FB426476901C2F3E973A3522 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DA8805691ED342F0000CB4A8 /* PBXTargetDependency */,
 			);
 			name = TestApp;
 			productName = MapboxPlugins;
@@ -347,6 +374,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		385F226DE08B7A3D2D0E2243 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrafficPlugin/Pods-TrafficPlugin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3E0EC6281F55D2D8006BC03F /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -360,35 +402,95 @@
 			shellPath = /bin/sh;
 			shellScript = "$SRCROOT/insert-mapbox-token.sh";
 		};
-		DA8805901ED39532000CB4A8 /* Copy Frameworks */ = {
+		63461F0760B0C175CD32FA7D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Mapbox.framework",
 			);
-			name = "Copy Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestApp/Pods-TestApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
-		DADBBE851EDDF8EB009F8AC8 /* Copy Frameworks */ = {
+		BB7F798EDA73C436A9ACA9DB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Mapbox.framework",
 			);
-			name = "Copy Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C305DB6AC717D03F3715B86B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E907E8DB9C8EE86B5A37B039 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PluginKit/Pods-PluginKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0FD000081624D2ACDB7E44B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FB426476901C2F3E973A3522 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestApp/Pods-TestApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -424,11 +526,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DA8805691ED342F0000CB4A8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DA8805621ED342F0000CB4A8 /* TrafficPlugin */;
-			targetProxy = DA8805681ED342F0000CB4A8 /* PBXContainerItemProxy */;
-		};
 		DA8805921ED3CEC3000CB4A8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DA8805771ED34744000CB4A8 /* PluginKit */;
@@ -458,6 +555,7 @@
 /* Begin XCBuildConfiguration section */
 		DA88056C1ED342F0000CB4A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23038350B97D8048497AB0A7 /* Pods-TrafficPlugin.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
@@ -467,11 +565,10 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
 					"$(SRCROOT)/TrafficPlugin",
+					"$(PROJECT_DIR)/Pods/Mapbox-iOS-SDK/dynamic",
 				);
-				INFOPLIST_FILE = LocalizationPlugin/Info.plist;
+				INFOPLIST_FILE = TrafficPlugin/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
@@ -485,6 +582,7 @@
 		};
 		DA88056D1ED342F0000CB4A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E3D2952AEF2EFC30678BC33 /* Pods-TrafficPlugin.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CONFIGURATION_BUILD_DIR = TrafficPlugin;
@@ -496,11 +594,10 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
 					"$(SRCROOT)/TrafficPlugin",
+					"$(PROJECT_DIR)/Pods/Mapbox-iOS-SDK/dynamic",
 				);
-				INFOPLIST_FILE = LocalizationPlugin/Info.plist;
+				INFOPLIST_FILE = TrafficPlugin/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
@@ -514,6 +611,7 @@
 		};
 		DA88057F1ED34744000CB4A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 501DF0FB86B059E1610DAD80 /* Pods-PluginKit.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = GJZR2MEM28;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -528,6 +626,7 @@
 		};
 		DA8805801ED34744000CB4A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B60D90E910B312EEAE3F074 /* Pods-PluginKit.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = GJZR2MEM28;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -636,12 +735,13 @@
 		};
 		DAF50B3E1ECA15B50044B316 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B647DD67A710D239904CB3D3 /* Pods-TestApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GJZR2MEM28;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Pods/Mapbox-iOS-SDK/dynamic",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/TestApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -652,12 +752,13 @@
 		};
 		DAF50B3F1ECA15B50044B316 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 140228755391DBD91A6B0117 /* Pods-TestApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GJZR2MEM28;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Pods/Mapbox-iOS-SDK/dynamic",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/TestApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
