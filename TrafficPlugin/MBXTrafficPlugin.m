@@ -15,9 +15,12 @@
 
 // Default method to add traffic layers
 - (void)addToMapView:(MGLMapView *)mapView {
-    MGLSymbolStyleLayer *symbolLayer = (MGLSymbolStyleLayer *)[mapView.style layerWithIdentifier:@"poi-scalerank3"];
-    
-    [self addToMapView:mapView below:symbolLayer];
+    for (MGLStyleLayer *layer in mapView.style.layers.reverseObjectEnumerator) {
+        if (![layer isKindOfClass:[MGLSymbolStyleLayer class]]) {
+           [self addToMapView:mapView above:layer];
+            break;
+        }
+    }
 }
 
 // Insert layers below a specific layer.
@@ -159,11 +162,8 @@
 
 // MARK: Traffic Layer Removal
 - (void)removeFromMapView:(MGLMapView *)mapView {
-    for (NSString *identifier in _trafficLayerIdentifiers) {
-        MGLStyleLayer *layer = [mapView.style layerWithIdentifier:identifier];
-        [mapView.style removeLayer:layer];
-    }
-    _trafficLayerIdentifiers = [NSMutableArray array];
+    MGLSource *source = [mapView.style sourceWithIdentifier:@"traffic-source"];
+    [mapView.style removeSource:source];
 }
 
 @end
