@@ -162,10 +162,10 @@
         MGLStyleLayer *layer = [mapView.style layerWithIdentifier:identifier];
         [mapView.style removeLayer:layer];
     }
-    _trafficLayerIdentifiers = [NSMutableArray new];
-    
-    //    NSArray *trafficLayers = [mapView.style.layers filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"sourceIdentifier == 'traffic-source'"]];
-    //    for (MGLStyleLayer *layer in trafficLayers) { [mapView.style removeLayer:layer]; }
+    _trafficLayerIdentifiers = [NSMutableArray array];
+////
+//        NSArray *trafficLayers = [mapView.style.layers filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"sourceIdentifier IS 'traffic-source'"]];
+//        for (MGLStyleLayer *layer in trafficLayers) { [mapView.style removeLayer:layer]; }
 }
 
 @end
