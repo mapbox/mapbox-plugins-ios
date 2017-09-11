@@ -1,6 +1,6 @@
 Adds a real-time traffic layer to your Mapbox basemap.
 
-![trafficplugin](https://user-images.githubusercontent.com/12474734/30234248-3bbe7bac-94b0-11e7-97b2-6b96a2a60c84.gif)
+![trafficplugin](trafficplugin.gif)
 
 ## Getting Started with the Traffic Plugin
 

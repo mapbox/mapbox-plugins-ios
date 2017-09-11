@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "MapboxMapsPlugins"
+  s.name         = "MapboxPlugins"
   s.version      = "0.0.1"
   s.summary      = "Experimental plugins to supercharge your maps."
 
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = "Add traffic to your Mapbox basemaps."
+  s.description  = "Add plugins to your Mapbox basemaps."
 
   s.homepage     = "https://github.com/mapbox/mapbox-plugins-ios/"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -45,15 +45,7 @@ s.social_media_url = "https://twitter.com/mapbox"
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  s.platform     = :ios
-  # s.platform     = :ios, "5.0"
-
-  #  When using multiple platforms
-  # s.ios.deployment_target = "5.0"
-  # s.osx.deployment_target = "10.7"
-  # s.watchos.deployment_target = "2.0"
-  # s.tvos.deployment_target = "9.0"
-
+  s.platform     = :ios, "10.0"
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -63,7 +55,7 @@ s.social_media_url = "https://twitter.com/mapbox"
 
   s.source       = { :git => "https://github.com/mapbox/mapbox-plugins-ios.git", :branch => "traffic-plugin" }
 
-  s.module_name = 'MapboxMapsPlugins'
+  s.module_name = 'MapboxPlugins'
 
   s.subspec 'PluginKit' do |core|
     core.source_files  = 'PluginKit/*.h'
@@ -72,7 +64,7 @@ s.social_media_url = "https://twitter.com/mapbox"
 
   s.subspec 'Traffic' do |traffic|
     traffic.source_files = 'TrafficPlugin/*.{h,m}'
-    traffic.dependency 'MapboxMapsPlugins/PluginKit'
+    traffic.dependency 'MapboxPlugins/PluginKit'
   end
 
 end

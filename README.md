@@ -25,11 +25,11 @@ There are currently two ways to install Mapbox Maps Plugins:
 ```
   target 'YourAppName' do
   use_frameworks!
-  `pod MapboxMapsPlugins`
+  `pod MapboxPlugins`
 end
 ```
 
-  To only install the Mapbox Traffic Plugin, replace `pod MapboxMapsPlugins` with `pod MapboxMapsPlugins/Traffic`.
+  To only install the Mapbox Traffic Plugin, replace `pod MapboxMapsPlugins` with `pod MapboxPlugins/Traffic`.
   Note that the CocoaPod does include [Mapbox iOS SDK](https://www.mapbox.com/ios-sdk/) v3.6 as a dependency, and should update to the latest patch release of v3.6 when you run `pod update`.
 
 2. If you prefer not to use CocoaPods, copy the files for the plugin that you would like to use into your project. You will need to use a bridging header if your project is written in Swift.

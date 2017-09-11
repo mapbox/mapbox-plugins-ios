@@ -9,15 +9,11 @@
 
 @implementation MBXTrafficPlugin
 
-+ (void)initialize {
-
-}
-
 // Default method to add traffic layers
 - (void)addToMapView:(MGLMapView *)mapView {
     for (MGLStyleLayer *layer in mapView.style.layers.reverseObjectEnumerator) {
         if (![layer isKindOfClass:[MGLSymbolStyleLayer class]]) {
-           [self addToMapView:mapView above:layer];
+            [self addToMapView:mapView above:layer];
             break;
         }
     }
@@ -25,14 +21,14 @@
 
 // Insert layers below a specific layer.
 - (void)addToMapView:(MGLMapView *)mapView below:(MGLStyleLayer *)layer {
-
+    
     [self setupPropertiesFor:mapView];
     
     // Consolidate to one layer once lineWidth supports DDS.
     [self addMotorwayLayerTo:mapView below:YES style:layer];
     [self addPrimaryLayerTo:mapView below:YES style:layer];
     [self addStreetLayerTo:mapView below:YES style:layer];
-//
+    //
 }
 
 - (void)addToMapView:(MGLMapView *)mapView above:(MGLStyleLayer *)layer {
@@ -162,8 +158,14 @@
 
 // MARK: Traffic Layer Removal
 - (void)removeFromMapView:(MGLMapView *)mapView {
-    MGLSource *source = [mapView.style sourceWithIdentifier:@"traffic-source"];
-    [mapView.style removeSource:source];
+    for (NSString *identifier in _trafficLayerIdentifiers) {
+        MGLStyleLayer *layer = [mapView.style layerWithIdentifier:identifier];
+        [mapView.style removeLayer:layer];
+    }
+    _trafficLayerIdentifiers = [NSMutableArray new];
+    
+    //    NSArray *trafficLayers = [mapView.style.layers filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"sourceIdentifier == 'traffic-source'"]];
+    //    for (MGLStyleLayer *layer in trafficLayers) { [mapView.style removeLayer:layer]; }
 }
 
 @end
