@@ -4,7 +4,6 @@
 
 @property (nonatomic, retain) MGLVectorSource *source;
 @property (nonatomic, retain) MGLStyleValue const *trafficColor;
-@property (nonatomic, retain) NSMutableArray *trafficLayerIdentifiers;
 @end
 
 @implementation MBXTrafficPlugin
@@ -46,8 +45,6 @@
     dispatch_once(&onceToken, ^{
         _source = [[MGLVectorSource alloc] initWithIdentifier:@"traffic-source" configurationURL:[NSURL URLWithString:@"mapbox://mapbox.mapbox-traffic-v1"]];
         [mapView.style addSource:_source];
-        
-        _trafficLayerIdentifiers = [NSMutableArray new];
         
         NSDictionary *stopsDictionary = @{
                                           @"low" : [MGLStyleValue valueWithRawValue:[UIColor colorWithRed:88.0/255.0
@@ -97,7 +94,6 @@
     } else {
         [mapView.style insertLayer:motorwayLayer aboveLayer:layer];
     }
-    [_trafficLayerIdentifiers addObject:motorwayLayer.identifier];
 }
 
 // Adds primary, secondary, and tertiary road layer.
@@ -126,7 +122,6 @@
         
         [mapView.style insertLayer:primaryLayer aboveLayer:layer];
     }
-    [_trafficLayerIdentifiers addObject:primaryLayer.identifier];
 }
 
 // Adds street, service road, and link layer.
@@ -153,19 +148,15 @@
     } else {
         [mapView.style insertLayer:streetLayer aboveLayer:layer];
     }
-    [_trafficLayerIdentifiers addObject:streetLayer.identifier];
 }
 
 // MARK: Traffic Layer Removal
 - (void)removeFromMapView:(MGLMapView *)mapView {
-    for (NSString *identifier in _trafficLayerIdentifiers) {
-        MGLStyleLayer *layer = [mapView.style layerWithIdentifier:identifier];
+    
+    for (MGLStyleLayer *layer in mapView.style.layers) if ([layer isKindOfClass:[MGLLineStyleLayer class]] && [((MGLLineStyleLayer *)layer).sourceIdentifier isEqualToString:@"traffic-source"]) {
         [mapView.style removeLayer:layer];
     }
-    _trafficLayerIdentifiers = [NSMutableArray array];
-////
-//        NSArray *trafficLayers = [mapView.style.layers filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"sourceIdentifier IS 'traffic-source'"]];
-//        for (MGLStyleLayer *layer in trafficLayers) { [mapView.style removeLayer:layer]; }
+
 }
 
 @end
