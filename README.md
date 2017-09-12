@@ -9,7 +9,7 @@ Plugins allow users to easily add features to their Mapbox maps. Plugins are foc
 
 ## Using Test App
 
-Test out Mapbox Maps Plugins in the TestApp.
+Test out Mapbox Plugins in the TestApp.
 
 1. Run `carthage bootstrap` to install the Mapbox iOS SDK.
 
@@ -21,7 +21,7 @@ There are currently two ways to install Mapbox Maps Plugins:
 
 1. **CocoaPods**
 
-  To install all Mapbox Maps Plugins, add the following to your Podfile:
+  To install all Mapbox Plugins, add the following to your Podfile:
 ```
   target 'YourAppName' do
   use_frameworks!
@@ -29,7 +29,7 @@ There are currently two ways to install Mapbox Maps Plugins:
 end
 ```
 
-  To only install the Mapbox Traffic Plugin, replace `pod MapboxMapsPlugins` with `pod MapboxPlugins/Traffic`.
+  To only install the Mapbox Traffic Plugin, replace `pod MapboxPlugins` with `pod MapboxPlugins/Traffic`.
   Note that the CocoaPod does include [Mapbox iOS SDK](https://www.mapbox.com/ios-sdk/) v3.6 as a dependency, and should update to the latest patch release of v3.6 when you run `pod update`.
 
 2. If you prefer not to use CocoaPods, copy the files for the plugin that you would like to use into your project. You will need to use a bridging header if your project is written in Swift.
