@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = "Add plugins to your Mapbox basemaps."
+  s.description  = "Add plugins to your Mapbox basemaps. Mapbox Plugins allow you to add a traffic layer to your maps."
 
   s.homepage     = "https://github.com/mapbox/mapbox-plugins-ios/"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
