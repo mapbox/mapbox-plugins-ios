@@ -10,7 +10,7 @@ These methods should not be called before [the style has finished loading](https
 
     - (void)addToMapView:(MGLMapView *)mapView;
 
-Add traffic to a MGLMapView. This method inserts the traffic layer below places of interest with a scale rank of 3 (POIs that either have a small area or are generally acknowledged to cover large areas, i.e. hospitals and universities). See the [Mapbox Vector Tile Source layer reference](https://www.mapbox.com/vector-tiles/mapbox-streets-v7/#layer-reference) for more information about vector tile layers.
+Add traffic to a MGLMapView. This method inserts the traffic layer above the road layer. See the [Mapbox Vector Tile Source layer reference](https://www.mapbox.com/vector-tiles/mapbox-streets-v7/#layer-reference) for more information about vector tile layers.
 
     - (void)addToMapView:(MGLMapView *)mapView below:(MGLStyleLayer *)symbolLayer;
 
@@ -26,7 +26,7 @@ Removes all traffic layers from the map.
 ### Swift
 ```swift
     import Mapbox
-    import MapboxMapsPlugins
+    import MapboxPlugins
 
     class ViewController: UIViewController, MGLMapViewDelegate {
 
@@ -57,7 +57,7 @@ Removes all traffic layers from the map.
 
 ```objc
 #import "ViewController.h"
-#import <MapboxMapsPlugins/MBXTrafficPlugin.h>
+#import <MapboxPlugins/MBXTrafficPlugin.h>
 
 @interface ViewController () <MGLMapViewDelegate>
 
