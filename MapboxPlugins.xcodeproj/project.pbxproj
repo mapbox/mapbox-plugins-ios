@@ -25,6 +25,7 @@
 		DAF50B341ECA15B50044B316 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF50B321ECA15B50044B316 /* Main.storyboard */; };
 		DAF50B361ECA15B50044B316 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAF50B351ECA15B50044B316 /* Assets.xcassets */; };
 		DAF50B391ECA15B50044B316 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF50B371ECA15B50044B316 /* LaunchScreen.storyboard */; };
+		E8FA56C490748C0E81ADA1F6 /* libPods-TrafficPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92182F63EE2ED3541E52882F /* libPods-TrafficPlugin.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 			files = (
 				3E8BF7BE1F6367270087C80E /* Mapbox.framework.dSYM in Frameworks */,
 				3E8BF7BC1F6367270087C80E /* Mapbox.framework in Frameworks */,
+				E8FA56C490748C0E81ADA1F6 /* libPods-TrafficPlugin.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,6 +569,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/TrafficPlugin",
 					"$(PROJECT_DIR)/Pods/Mapbox-iOS-SDK/dynamic",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = TrafficPlugin/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -596,6 +599,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/TrafficPlugin",
 					"$(PROJECT_DIR)/Pods/Mapbox-iOS-SDK/dynamic",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = TrafficPlugin/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -618,7 +622,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "Mapbox$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -633,7 +640,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "Mapbox$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -680,10 +690,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/TestApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -724,9 +736,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/TestApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

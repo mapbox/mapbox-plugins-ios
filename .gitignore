@@ -1,7 +1,7 @@
 .DS_Store
 
-TrafficPlugin.framework
-TrafficPlugin.build
+*.framework
+*.build/*
 xcuserdata
 *.xccheckout
 *.moved-aside

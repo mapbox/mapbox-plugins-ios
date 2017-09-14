@@ -5,19 +5,19 @@ Plugins allow users to easily add features to their Mapbox maps. Plugins are foc
 
 ## Available Plugins
 
-- [Traffic](https://github.com/mapbox/mapbox-plugins-ios/tree/master/TrafficPlugin) - Add a traffic layer to your Mapbox basemap.
+- [Traffic](https://github.com/mapbox/mapbox-plugins-ios/tree/master/TrafficPlugin) - Add a traffic layer to your Mapbox basemap .
 
 ## Using Test App
 
 Test out Mapbox Plugins in the TestApp.
 
-1. Run `carthage bootstrap` to install the Mapbox iOS SDK.
+1. Run `pod update` to install the Mapbox iOS SDK.
 
 2. Create a text file called `mapbox_access_token` and add your [Mapbox Access token](https://www.mapbox.com/help/how-access-tokens-work/) to it.
 
 ## Installing Plugins
 
-There are currently two ways to install Mapbox Maps Plugins:
+There are currently two ways to install Mapbox Plugins:
 
 1. **CocoaPods**
 

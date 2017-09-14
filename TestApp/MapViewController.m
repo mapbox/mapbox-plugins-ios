@@ -1,6 +1,6 @@
 #import "MapViewController.h"
 
-#import <MapboxPluginKit/MapboxPluginKit.h>
+#import "MapboxPluginKit.h"
 #import <Mapbox/Mapbox.h>
 
 @interface MapViewController () <MGLMapViewDelegate>
