@@ -3,7 +3,8 @@
 @interface MBXTrafficPlugin ()
 
 @property (nonatomic, retain) MGLVectorSource *source;
-@property (nonatomic, retain) MGLStyleValue const *trafficColor;
+@property (nonatomic, retain) MGLStyleValue *trafficColor;
+@property (nonatomic) NSString *sourceIdentifier;
 @end
 
 @implementation MBXTrafficPlugin
@@ -41,11 +42,13 @@
 
 - (void) setupPropertiesFor:(MGLMapView *)mapView {
     // Add traffic source to map style.
+    if (_source == nil) {
+        _sourceIdentifier = [NSString stringWithFormat:@"%@-traffic-source", [[NSBundle mainBundle] bundleIdentifier]];
+        _source = [[MGLVectorSource alloc] initWithIdentifier:_sourceIdentifier configurationURL:[NSURL URLWithString:@"mapbox://mapbox.mapbox-traffic-v1"]];
+        [mapView.style addSource:_source];
+    }
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _source = [[MGLVectorSource alloc] initWithIdentifier:@"traffic-source" configurationURL:[NSURL URLWithString:@"mapbox://mapbox.mapbox-traffic-v1"]];
-        [mapView.style addSource:_source];
-        
         NSDictionary *stopsDictionary = @{
                                           @"low" : [MGLStyleValue valueWithRawValue:[UIColor colorWithRed:88.0/255.0
                                                                                                     green:195.0/255.0
@@ -69,10 +72,10 @@
 }
 
 // MARK: Add three traffic layers
-// Adds motorway, motorway-link, and trunk layer.
+// Adds motorway, motorway_link, and trunk layer.
 - (void)addMotorwayLayerTo:(MGLMapView *)mapView below:(BOOL)below style:(MGLStyleLayer *)layer {
     
-    MGLLineStyleLayer *motorwayLayer = [[MGLLineStyleLayer alloc] initWithIdentifier:@"traffic-motorway-layer" source:_source];
+    MGLLineStyleLayer *motorwayLayer = [[MGLLineStyleLayer alloc] initWithIdentifier:@"mbx-traffic-motorway-layer" source:_source];
     motorwayLayer.sourceLayerIdentifier = @"traffic";
     motorwayLayer.predicate = [NSPredicate predicateWithFormat:@"class IN {'motorway', 'motorway_link', 'trunk'}"];
     
@@ -98,7 +101,7 @@
 
 // Adds primary, secondary, and tertiary road layer.
 - (void)addPrimaryLayerTo:(MGLMapView *)mapView below:(BOOL)below style:(MGLStyleLayer *)layer {
-    MGLLineStyleLayer *primaryLayer = [[MGLLineStyleLayer alloc] initWithIdentifier:@"traffic-primary-layer" source:_source];
+    MGLLineStyleLayer *primaryLayer = [[MGLLineStyleLayer alloc] initWithIdentifier:@"mbx-traffic-primary-layer" source:_source];
     primaryLayer.sourceLayerIdentifier = @"traffic";
     primaryLayer.predicate = [NSPredicate predicateWithFormat:@"class IN {'primary', 'secondary', 'tertiary'}"];
     
@@ -126,7 +129,7 @@
 
 // Adds street, service road, and link layer.
 - (void)addStreetLayerTo:(MGLMapView *)mapView below:(BOOL)below style:(MGLStyleLayer *)layer {
-    MGLLineStyleLayer *streetLayer = [[MGLLineStyleLayer alloc] initWithIdentifier:@"traffic-street-layer" source:_source];
+    MGLLineStyleLayer *streetLayer = [[MGLLineStyleLayer alloc] initWithIdentifier:@"mbx-traffic-street-layer" source:_source];
     streetLayer.sourceLayerIdentifier = @"traffic";
     streetLayer.predicate = [NSPredicate predicateWithFormat:@"class IN {'street', 'link', 'service'}"];
     
@@ -153,10 +156,12 @@
 // MARK: Traffic Layer Removal
 - (void)removeFromMapView:(MGLMapView *)mapView {
     
-    for (MGLStyleLayer *layer in mapView.style.layers) if ([layer isKindOfClass:[MGLLineStyleLayer class]] && [((MGLLineStyleLayer *)layer).sourceIdentifier isEqualToString:@"traffic-source"]) {
-        [mapView.style removeLayer:layer];
+    for (MGLLineStyleLayer *layer in mapView.style.layers) {
+        
+        if ([layer isKindOfClass:[MGLLineStyleLayer class]] && [layer.sourceIdentifier isEqualToString:_sourceIdentifier]) {
+            [mapView.style removeLayer:layer];
+        }
     }
-
 }
 
 @end

@@ -3,8 +3,9 @@
 #import <Foundation/Foundation.h>
 #import <Mapbox/Mapbox.h>
 
-@interface MBXTrafficPlugin : NSObject <MBXPlugin>
+extern MGLStyleValue *trafficColor;
 
+@interface MBXTrafficPlugin : NSObject <MBXPlugin>
 
 /**
  Add traffic to a MGLMapView. This method inserts the traffic layer below places of interest with a scale rank of 3 (POIs that either have a small area or are generally acknowledged to cover large areas, i.e. hospitals and universities). See the Mapbox Vector Tile Source layer reference (https://www.mapbox.com/vector-tiles/mapbox-streets-v7/#layer-reference) for more information about vector tile layers.
