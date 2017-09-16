@@ -10,9 +10,10 @@ Pod::Spec.new do |s|
 
   # This description is used to generate tags and improve search results.
   s.description  = "Add plugins to your Mapbox basemaps. Each plugin is packaged as a subspec. At the moment, the following plugin is available:
-                    * “Traffic” adds traffic congestion layers to a map view."
+                    * “Traffic” adds traffic congestion layers to a map view.
+                    Mapbox Plugins require version 3.6 of the Mapbox iOS SDK or higher."
   s.homepage     = "https://github.com/mapbox/mapbox-plugins-ios/"
-
+  s.screenshot = 'https://github.com/mapbox/mapbox-plugins-ios/blob/traffic-plugin/TrafficPlugin/trafficplugin.gif'
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
 s.license = { :type => "ISC", :file => "LICENSE.md" }
