@@ -3,12 +3,14 @@
 #import <Foundation/Foundation.h>
 #import <Mapbox/Mapbox.h>
 
-extern MGLStyleValue *trafficColor;
 
+/**
+ MBXTrafficPlugin adds a traffic congestion layer to Mapbox basemaps. For more information about Mapbox Traffic vector tile source, see https://www.mapbox.com/vector-tiles/mapbox-traffic-v1/
+ */
 @interface MBXTrafficPlugin : NSObject <MBXPlugin>
 
 /**
- Add traffic to a MGLMapView. This method inserts the traffic layer below places of interest with a scale rank of 3 (POIs that either have a small area or are generally acknowledged to cover large areas, i.e. hospitals and universities). See the Mapbox Vector Tile Source layer reference (https://www.mapbox.com/vector-tiles/mapbox-streets-v7/#layer-reference) for more information about vector tile layers.
+ Add traffic to a MGLMapView. This method inserts the traffic layer above the road layer. See the Mapbox Vector Tile Source layer reference (https://www.mapbox.com/vector-tiles/mapbox-streets-v7/#layer-reference) for more information about vector tile layers.
  The earliest that this method can be called is in `-mapView:didFinishLoadingStyle:`
 
  @param mapView The map view that traffic will be displayed on.

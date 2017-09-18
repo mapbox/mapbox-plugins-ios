@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
                     * “Traffic” adds traffic congestion layers to a map view.
                     Mapbox Plugins require version 3.6 of the Mapbox iOS SDK or higher."
   s.homepage     = "https://github.com/mapbox/mapbox-plugins-ios/"
-  s.screenshot = 'https://github.com/mapbox/mapbox-plugins-ios/blob/master/TrafficPlugin/trafficplugin.gif'
+  s.screenshot = 'https://raw.githubusercontent.com/mapbox/mapbox-plugins-ios/master/TrafficPlugin/trafficplugin.gif'
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
 s.license = { :type => "ISC", :file => "LICENSE.md" }
