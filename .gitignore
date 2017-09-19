@@ -1,10 +1,12 @@
 .DS_Store
 
+*.framework
+*.build/*
 xcuserdata
 *.xccheckout
 *.moved-aside
 *.xcuserstate
 *.xcscmblueprint
 mapbox_access_token
-
-Carthage/
+Pods
+*.xcworkspace
