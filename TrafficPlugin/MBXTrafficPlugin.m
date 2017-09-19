@@ -1,17 +1,17 @@
 
 #import "MBXTrafficPlugin.h"
+
+static MGLStyleValue *_trafficColor;
+
 @interface MBXTrafficPlugin ()
 
 @property (nonatomic) MGLVectorSource *source;
-@property (nonatomic) MGLStyleValue *trafficColor;
 @property (nonatomic) NSString *bundleIdentifier;
 @end
 
 @implementation MBXTrafficPlugin
 
-static MGLStyleValue *_trafficColor;
-
-// Default method to add traffic layers
+// Default method to add traffic layers.
 - (void)addToMapView:(MGLMapView *)mapView {
     for (MGLStyleLayer *layer in mapView.style.layers.reverseObjectEnumerator) {
         if (![layer isKindOfClass:[MGLSymbolStyleLayer class]]) {
@@ -74,7 +74,7 @@ static MGLStyleValue *_trafficColor;
 }
 
 // MARK: Style three traffic layers.
-// Styles motorway, motorway-link, and trunk layer.
+// Styles the motorway, motorway_link, and trunk layer.
 - (MGLStyleLayer *)styleMotorwayLayer {
     MGLLineStyleLayer *motorwayLayer = [[MGLLineStyleLayer alloc] initWithIdentifier:[NSString stringWithFormat:@"%@-traffic-motorway-layer", _bundleIdentifier] source:_source];
     motorwayLayer.sourceLayerIdentifier = @"traffic";
@@ -96,7 +96,7 @@ static MGLStyleValue *_trafficColor;
     return motorwayLayer;
 }
 
-// Styless primary, secondary, and tertiary road layer.
+// Styles the primary, secondary, and tertiary road layer.
 - (MGLStyleLayer *)stylePrimaryLayer {
     MGLLineStyleLayer *primaryLayer = [[MGLLineStyleLayer alloc] initWithIdentifier:[NSString stringWithFormat:@"%@-traffic-primary-layer", _bundleIdentifier] source:_source];
     primaryLayer.sourceLayerIdentifier = @"traffic";
@@ -119,7 +119,7 @@ static MGLStyleValue *_trafficColor;
     return primaryLayer;
 }
 
-// Styles street, service road, and link layer.
+// Styles the street, service road, and link layer.
 - (MGLStyleLayer *)styleStreetLayer {
     MGLLineStyleLayer *streetLayer = [[MGLLineStyleLayer alloc] initWithIdentifier:[NSString stringWithFormat:@"%@-traffic-street-layer", _bundleIdentifier] source:_source];
     streetLayer.sourceLayerIdentifier = @"traffic";

@@ -5,12 +5,12 @@
 
 
 /**
- MBXTrafficPlugin adds a traffic congestion layer to Mapbox basemaps. For more information about Mapbox Traffic vector tile source, see https://www.mapbox.com/vector-tiles/mapbox-traffic-v1/
+ MBXTrafficPlugin adds a traffic congestion layer to Mapbox basemaps from the [Mapbox Traffic vector tile source](https://www.mapbox.com/vector-tiles/mapbox-traffic-v1/).
  */
 @interface MBXTrafficPlugin : NSObject <MBXPlugin>
 
 /**
- Add traffic to a MGLMapView. This method inserts the traffic layer above the road layer. See the Mapbox Vector Tile Source layer reference (https://www.mapbox.com/vector-tiles/mapbox-streets-v7/#layer-reference) for more information about vector tile layers.
+ Add traffic to a MGLMapView. This method inserts the traffic layer above the road layer. See the [Mapbox Streets layer reference](https://www.mapbox.com/vector-tiles/mapbox-streets-v7/#layer-reference) for more information about vector tile layers.
  The earliest that this method can be called is in `-mapView:didFinishLoadingStyle:`
 
  @param mapView The map view that traffic will be displayed on.

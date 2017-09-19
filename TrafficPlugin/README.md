@@ -44,11 +44,6 @@ Removes all traffic layers from the map.
         func mapView(_ mapView: MGLMapView, didFinishLoading style: MGLStyle) {
             let traffic = MBXTrafficPlugin()
             traffic.add(to: mapView)
-
-            // Removes the traffic layers after 10 seconds.
-            DispatchQueue.main.asyncAfter(deadline: .now() + 10, execute: {
-                traffic.remove(from: mapView)
-            })
         }
     }
 ```
