@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
 		2B0CE61E11B5AECC852262B1 /* libPods-PluginKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E804A8391EBCA17A19F6AB /* libPods-PluginKit.a */; };
 		3CCAC1DF6977DA0D057701CB /* libPods-TestApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146EAF023797AB1FEE660581 /* libPods-TestApp.a */; };
 		3E0EC62B1F5779C5006BC03F /* MBXTrafficPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0EC6291F5779C5006BC03F /* MBXTrafficPlugin.m */; };
