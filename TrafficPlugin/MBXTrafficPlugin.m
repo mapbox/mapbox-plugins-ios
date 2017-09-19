@@ -144,8 +144,8 @@ static MGLStyleValue *_trafficColor;
 
 // MARK: Traffic Layer Removal
 - (void)removeFromMapView:(MGLMapView *)mapView {
-    
-    for (MGLStyleLayer *layer in mapView.style.layers) if ([layer isKindOfClass:[MGLLineStyleLayer class]] && [((MGLLineStyleLayer *)layer).sourceIdentifier isEqualToString:@"traffic-source"]) {
+    NSString *sourceIdentifier = [NSString stringWithFormat:@"%@-traffic-source", _bundleIdentifier];
+    for (MGLStyleLayer *layer in mapView.style.layers) if ([layer isKindOfClass:[MGLLineStyleLayer class]] && [((MGLLineStyleLayer *)layer).sourceIdentifier isEqualToString:sourceIdentifier]) {
         [mapView.style removeLayer:layer];
     }
     
