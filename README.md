@@ -11,7 +11,7 @@ Plugins allow users to easily add features to their Mapbox maps. Plugins are foc
 
 Test out Mapbox Plugins in the TestApp.
 
-1. Run `pod update` to install the Mapbox iOS SDK.
+1. Run `pod update` to install the Mapbox Maps SDK for iOS.
 
 2. Create a text file called `mapbox_access_token` and add your [Mapbox Access token](https://www.mapbox.com/help/how-access-tokens-work/) to it.
 
@@ -30,7 +30,7 @@ end
 ```
 
   To only install the Mapbox Traffic Plugin, replace `pod MapboxPlugins` with `pod MapboxPlugins/Traffic`.
-  Note that the CocoaPod does include [Mapbox iOS SDK](https://www.mapbox.com/ios-sdk/) v3.6 as a dependency, and should update to the latest patch release of v3.6 when you run `pod update`.
+  Note that the CocoaPod does include [Mapbox Maps SDK for iOS](https://www.mapbox.com/ios-sdk/) v3.6 as a dependency, and should update to the latest patch release of v3.6 when you run `pod update`.
 
 2. If you prefer not to use CocoaPods, copy the files for the plugin that you would like to use into your project. You will need to use a bridging header if your project is written in Swift.
 
@@ -40,4 +40,4 @@ Carthage support is coming soon.
 
 Plugins are intended to be easy to use. If you see any issues related to Mapbox plugins, please open a ticket with steps to reproduce the issue.
 
-For questions related to the Mapbox iOS SDK, please visit https://www.mapbox.com/help/
+For questions related to the Mapbox Maps SDK for iOS, please visit https://www.mapbox.com/help/
