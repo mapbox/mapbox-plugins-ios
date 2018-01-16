@@ -1,7 +1,7 @@
 .DS_Store
 
 *.framework
-*.build/*
+*/*.build/*
 xcuserdata
 *.xccheckout
 *.moved-aside

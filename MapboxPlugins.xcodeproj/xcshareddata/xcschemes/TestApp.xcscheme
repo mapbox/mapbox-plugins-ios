@@ -29,6 +29,16 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3E279CD7200E8C290045DD01"
+               BuildableName = "ClusteringPluginTests.xctest"
+               BlueprintName = "ClusteringPluginTests"
+               ReferencedContainer = "container:MapboxPlugins.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

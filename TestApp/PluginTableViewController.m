@@ -2,6 +2,7 @@
 
 static const NSString *PluginClassNames[] = {
     @"MBXTrafficPlugin",
+    @"CKMapboxViewController"
 };
 
 NSString *DisplayNameForPluginClassName(NSString *pluginClassName) {

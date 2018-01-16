@@ -7,15 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
 		2B0CE61E11B5AECC852262B1 /* libPods-PluginKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E804A8391EBCA17A19F6AB /* libPods-PluginKit.a */; };
 		3CCAC1DF6977DA0D057701CB /* libPods-TestApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146EAF023797AB1FEE660581 /* libPods-TestApp.a */; };
 		3E0EC62B1F5779C5006BC03F /* MBXTrafficPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0EC6291F5779C5006BC03F /* MBXTrafficPlugin.m */; };
+		3E279CD9200E8C290045DD01 /* ClusteringPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E279CD0200E8C290045DD01 /* ClusteringPlugin.framework */; };
+		3E279CE0200E8C290045DD01 /* ClusteringPluginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E279CDF200E8C290045DD01 /* ClusteringPluginTests.m */; };
+		3E279CE5200E8C290045DD01 /* ClusteringPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E279CD0200E8C290045DD01 /* ClusteringPlugin.framework */; };
+		3E279CE6200E8C290045DD01 /* ClusteringPlugin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3E279CD0200E8C290045DD01 /* ClusteringPlugin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3E279D23200E8D0F0045DD01 /* ClusteringPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E279D18200E8D0E0045DD01 /* ClusteringPlugin.h */; };
+		3E279D24200E8D0F0045DD01 /* ClusterKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E279D19200E8D0E0045DD01 /* ClusterKit.h */; };
+		3E279D25200E8D0F0045DD01 /* CKClusterManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E279D1A200E8D0E0045DD01 /* CKClusterManager.h */; };
+		3E279D26200E8D0F0045DD01 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E279D1B200E8D0E0045DD01 /* Info.plist */; };
+		3E279D27200E8D0F0045DD01 /* CKClusterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E279D1C200E8D0E0045DD01 /* CKClusterManager.m */; };
+		3E279D28200E8D0F0045DD01 /* Algorithm in Resources */ = {isa = PBXBuildFile; fileRef = 3E279D1D200E8D0E0045DD01 /* Algorithm */; };
+		3E279D29200E8D0F0045DD01 /* Mapbox in Resources */ = {isa = PBXBuildFile; fileRef = 3E279D1E200E8D0E0045DD01 /* Mapbox */; };
+		3E279D2A200E8D0F0045DD01 /* Tree in Resources */ = {isa = PBXBuildFile; fileRef = 3E279D1F200E8D0E0045DD01 /* Tree */; };
+		3E279D2B200E8D0F0045DD01 /* CKMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E279D20200E8D0E0045DD01 /* CKMap.h */; };
+		3E279D2C200E8D0F0045DD01 /* CKCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E279D21200E8D0E0045DD01 /* CKCluster.m */; };
+		3E279D2D200E8D0F0045DD01 /* CKCluster.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E279D22200E8D0F0045DD01 /* CKCluster.h */; };
 		3E4BC9501F5F303B0015CF25 /* MBXTrafficPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E0EC62A1F5779C5006BC03F /* MBXTrafficPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3E4BC9511F5F30530015CF25 /* MBXTrafficPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0EC6291F5779C5006BC03F /* MBXTrafficPlugin.m */; };
 		3E8BF7BB1F63655F0087C80E /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8BF7BA1F63655F0087C80E /* Mapbox.framework */; };
 		3E8BF7BC1F6367270087C80E /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8BF7BA1F63655F0087C80E /* Mapbox.framework */; };
 		3E8BF7BE1F6367270087C80E /* Mapbox.framework.dSYM in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8BF7BD1F6367270087C80E /* Mapbox.framework.dSYM */; };
+		C02A5797A06E4DF909B9A8BF /* libPods-ClusteringPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 130F4D14C41DCD016F34A0A2 /* libPods-ClusteringPlugin.a */; };
 		DA88057D1ED34744000CB4A8 /* MapboxPluginKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DA88057A1ED34744000CB4A8 /* MapboxPluginKit.h */; };
 		DA8805861ED34868000CB4A8 /* MBXPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = DA8805811ED34787000CB4A8 /* MBXPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA88058A1ED34CD2000CB4A8 /* PluginTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8805891ED34CD2000CB4A8 /* PluginTableViewController.m */; };
@@ -30,6 +45,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3E279CDA200E8C290045DD01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAF50B1B1ECA15B50044B316 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E279CCF200E8C290045DD01;
+			remoteInfo = ClusteringPlugin;
+		};
+		3E279CDC200E8C290045DD01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAF50B1B1ECA15B50044B316 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAF50B221ECA15B50044B316;
+			remoteInfo = TestApp;
+		};
+		3E279CE3200E8C290045DD01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAF50B1B1ECA15B50044B316 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E279CCF200E8C290045DD01;
+			remoteInfo = ClusteringPlugin;
+		};
 		DA8805911ED3CEC3000CB4A8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DAF50B1B1ECA15B50044B316 /* Project object */;
@@ -46,6 +82,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				3E279CE6200E8C290045DD01 /* ClusteringPlugin.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,6 +100,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		130F4D14C41DCD016F34A0A2 /* libPods-ClusteringPlugin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ClusteringPlugin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		140228755391DBD91A6B0117 /* Pods-TestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestApp/Pods-TestApp.release.xcconfig"; sourceTree = "<group>"; };
 		146EAF023797AB1FEE660581 /* libPods-TestApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E3D2952AEF2EFC30678BC33 /* Pods-TrafficPlugin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrafficPlugin.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrafficPlugin/Pods-TrafficPlugin.release.xcconfig"; sourceTree = "<group>"; };
@@ -70,15 +108,32 @@
 		3E0EC6291F5779C5006BC03F /* MBXTrafficPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBXTrafficPlugin.m; path = TrafficPlugin/MBXTrafficPlugin.m; sourceTree = SOURCE_ROOT; };
 		3E0EC62A1F5779C5006BC03F /* MBXTrafficPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBXTrafficPlugin.h; path = TrafficPlugin/MBXTrafficPlugin.h; sourceTree = SOURCE_ROOT; };
 		3E0EC62D1F577BBE006BC03F /* MBXPlugin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBXPlugin-Bridging-Header.h"; sourceTree = "<group>"; };
+		3E279CD0200E8C290045DD01 /* ClusteringPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ClusteringPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E279CD8200E8C290045DD01 /* ClusteringPluginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClusteringPluginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E279CDF200E8C290045DD01 /* ClusteringPluginTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClusteringPluginTests.m; sourceTree = "<group>"; };
+		3E279CE1200E8C290045DD01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E279D18200E8D0E0045DD01 /* ClusteringPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClusteringPlugin.h; sourceTree = "<group>"; };
+		3E279D19200E8D0E0045DD01 /* ClusterKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClusterKit.h; sourceTree = "<group>"; };
+		3E279D1A200E8D0E0045DD01 /* CKClusterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKClusterManager.h; sourceTree = "<group>"; };
+		3E279D1B200E8D0E0045DD01 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E279D1C200E8D0E0045DD01 /* CKClusterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKClusterManager.m; sourceTree = "<group>"; };
+		3E279D1D200E8D0E0045DD01 /* Algorithm */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Algorithm; sourceTree = "<group>"; };
+		3E279D1E200E8D0E0045DD01 /* Mapbox */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Mapbox; sourceTree = "<group>"; };
+		3E279D1F200E8D0E0045DD01 /* Tree */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tree; sourceTree = "<group>"; };
+		3E279D20200E8D0E0045DD01 /* CKMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKMap.h; sourceTree = "<group>"; };
+		3E279D21200E8D0E0045DD01 /* CKCluster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCluster.m; sourceTree = "<group>"; };
+		3E279D22200E8D0F0045DD01 /* CKCluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCluster.h; sourceTree = "<group>"; };
 		3E45FEBC1F588709001EB296 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E4BC9521F5F32360015CF25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = LocalizationPlugin/Info.plist; sourceTree = SOURCE_ROOT; };
 		3E8BF7BA1F63655F0087C80E /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = "Pods/Mapbox-iOS-SDK/dynamic/Mapbox.framework"; sourceTree = "<group>"; };
 		3E8BF7BD1F6367270087C80E /* Mapbox.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Mapbox.framework.dSYM; path = "Pods/Mapbox-iOS-SDK/dynamic/Mapbox.framework.dSYM"; sourceTree = "<group>"; };
 		501DF0FB86B059E1610DAD80 /* Pods-PluginKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PluginKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PluginKit/Pods-PluginKit.debug.xcconfig"; sourceTree = "<group>"; };
+		58342490ED0F9D375EF99A27 /* Pods-ClusteringPlugin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClusteringPlugin.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClusteringPlugin/Pods-ClusteringPlugin.release.xcconfig"; sourceTree = "<group>"; };
 		63E804A8391EBCA17A19F6AB /* libPods-PluginKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PluginKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B60D90E910B312EEAE3F074 /* Pods-PluginKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PluginKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-PluginKit/Pods-PluginKit.release.xcconfig"; sourceTree = "<group>"; };
 		92182F63EE2ED3541E52882F /* libPods-TrafficPlugin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TrafficPlugin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B647DD67A710D239904CB3D3 /* Pods-TestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestApp/Pods-TestApp.debug.xcconfig"; sourceTree = "<group>"; };
+		D86C9C738946999884AB4BC3 /* Pods-ClusteringPlugin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClusteringPlugin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClusteringPlugin/Pods-ClusteringPlugin.debug.xcconfig"; sourceTree = "<group>"; };
 		DA8805631ED342F0000CB4A8 /* TrafficPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TrafficPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8805781ED34744000CB4A8 /* libMapboxPluginKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMapboxPluginKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA88057A1ED34744000CB4A8 /* MapboxPluginKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapboxPluginKit.h; sourceTree = "<group>"; };
@@ -99,6 +154,22 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3E279CCC200E8C290045DD01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C02A5797A06E4DF909B9A8BF /* libPods-ClusteringPlugin.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E279CD5200E8C290045DD01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E279CD9200E8C290045DD01 /* ClusteringPlugin.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DA88055F1ED342F0000CB4A8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -121,6 +192,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E279CE5200E8C290045DD01 /* ClusteringPlugin.framework in Frameworks */,
 				3E8BF7BB1F63655F0087C80E /* Mapbox.framework in Frameworks */,
 				3CCAC1DF6977DA0D057701CB /* libPods-TestApp.a in Frameworks */,
 			);
@@ -129,6 +201,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E279CD1200E8C290045DD01 /* ClusteringPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				3E279D1D200E8D0E0045DD01 /* Algorithm */,
+				3E279D22200E8D0F0045DD01 /* CKCluster.h */,
+				3E279D21200E8D0E0045DD01 /* CKCluster.m */,
+				3E279D1A200E8D0E0045DD01 /* CKClusterManager.h */,
+				3E279D1C200E8D0E0045DD01 /* CKClusterManager.m */,
+				3E279D20200E8D0E0045DD01 /* CKMap.h */,
+				3E279D18200E8D0E0045DD01 /* ClusteringPlugin.h */,
+				3E279D19200E8D0E0045DD01 /* ClusterKit.h */,
+				3E279D1B200E8D0E0045DD01 /* Info.plist */,
+				3E279D1E200E8D0E0045DD01 /* Mapbox */,
+				3E279D1F200E8D0E0045DD01 /* Tree */,
+			);
+			path = ClusteringPlugin;
+			sourceTree = "<group>";
+		};
+		3E279CDE200E8C290045DD01 /* ClusteringPluginTests */ = {
+			isa = PBXGroup;
+			children = (
+				3E279CDF200E8C290045DD01 /* ClusteringPluginTests.m */,
+				3E279CE1200E8C290045DD01 /* Info.plist */,
+			);
+			path = ClusteringPluginTests;
+			sourceTree = "<group>";
+		};
 		3EEB5A7C1F4F7ED9008E73B6 /* TrafficPlugin */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +248,8 @@
 				140228755391DBD91A6B0117 /* Pods-TestApp.release.xcconfig */,
 				23038350B97D8048497AB0A7 /* Pods-TrafficPlugin.debug.xcconfig */,
 				1E3D2952AEF2EFC30678BC33 /* Pods-TrafficPlugin.release.xcconfig */,
+				D86C9C738946999884AB4BC3 /* Pods-ClusteringPlugin.debug.xcconfig */,
+				58342490ED0F9D375EF99A27 /* Pods-ClusteringPlugin.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -171,6 +272,7 @@
 				63E804A8391EBCA17A19F6AB /* libPods-PluginKit.a */,
 				146EAF023797AB1FEE660581 /* libPods-TestApp.a */,
 				92182F63EE2ED3541E52882F /* libPods-TrafficPlugin.a */,
+				130F4D14C41DCD016F34A0A2 /* libPods-ClusteringPlugin.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -181,6 +283,8 @@
 				DAF50B251ECA15B50044B316 /* TestApp */,
 				3EEB5A7C1F4F7ED9008E73B6 /* TrafficPlugin */,
 				DA8805791ED34744000CB4A8 /* PluginKit */,
+				3E279CD1200E8C290045DD01 /* ClusteringPlugin */,
+				3E279CDE200E8C290045DD01 /* ClusteringPluginTests */,
 				DAF50B241ECA15B50044B316 /* Products */,
 				DA88058C1ED3950D000CB4A8 /* Frameworks */,
 				D8335DC48D42E9AA12F27FCB /* Pods */,
@@ -193,6 +297,8 @@
 				DAF50B231ECA15B50044B316 /* TestApp.app */,
 				DA8805631ED342F0000CB4A8 /* TrafficPlugin.framework */,
 				DA8805781ED34744000CB4A8 /* libMapboxPluginKit.a */,
+				3E279CD0200E8C290045DD01 /* ClusteringPlugin.framework */,
+				3E279CD8200E8C290045DD01 /* ClusteringPluginTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -228,6 +334,18 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		3E279CCD200E8C290045DD01 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E279D25200E8D0F0045DD01 /* CKClusterManager.h in Headers */,
+				3E279D2B200E8D0F0045DD01 /* CKMap.h in Headers */,
+				3E279D2D200E8D0F0045DD01 /* CKCluster.h in Headers */,
+				3E279D24200E8D0F0045DD01 /* ClusterKit.h in Headers */,
+				3E279D23200E8D0F0045DD01 /* ClusteringPlugin.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DA8805601ED342F0000CB4A8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -247,6 +365,45 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		3E279CCF200E8C290045DD01 /* ClusteringPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E279CE7200E8C290045DD01 /* Build configuration list for PBXNativeTarget "ClusteringPlugin" */;
+			buildPhases = (
+				67F81239BE88216396938CC9 /* [CP] Check Pods Manifest.lock */,
+				3E279CCB200E8C290045DD01 /* Sources */,
+				3E279CCC200E8C290045DD01 /* Frameworks */,
+				3E279CCD200E8C290045DD01 /* Headers */,
+				3E279CCE200E8C290045DD01 /* Resources */,
+				282F1A2DE34E908463AEA7D8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClusteringPlugin;
+			productName = ClusteringPlugin;
+			productReference = 3E279CD0200E8C290045DD01 /* ClusteringPlugin.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3E279CD7200E8C290045DD01 /* ClusteringPluginTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E279CEA200E8C290045DD01 /* Build configuration list for PBXNativeTarget "ClusteringPluginTests" */;
+			buildPhases = (
+				3E279CD4200E8C290045DD01 /* Sources */,
+				3E279CD5200E8C290045DD01 /* Frameworks */,
+				3E279CD6200E8C290045DD01 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E279CDB200E8C290045DD01 /* PBXTargetDependency */,
+				3E279CDD200E8C290045DD01 /* PBXTargetDependency */,
+			);
+			name = ClusteringPluginTests;
+			productName = ClusteringPluginTests;
+			productReference = 3E279CD8200E8C290045DD01 /* ClusteringPluginTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		DA8805621ED342F0000CB4A8 /* TrafficPlugin */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA88056E1ED342F0000CB4A8 /* Build configuration list for PBXNativeTarget "TrafficPlugin" */;
@@ -304,6 +461,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				3E279CE4200E8C290045DD01 /* PBXTargetDependency */,
 			);
 			name = TestApp;
 			productName = MapboxPlugins;
@@ -319,6 +477,17 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Mapbox;
 				TargetAttributes = {
+					3E279CCF200E8C290045DD01 = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = GJZR2MEM28;
+						ProvisioningStyle = Automatic;
+					};
+					3E279CD7200E8C290045DD01 = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = 85826LGZGV;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DAF50B221ECA15B50044B316;
+					};
 					DA8805621ED342F0000CB4A8 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = GJZR2MEM28;
@@ -352,11 +521,31 @@
 				DAF50B221ECA15B50044B316 /* TestApp */,
 				DA8805771ED34744000CB4A8 /* PluginKit */,
 				DA8805621ED342F0000CB4A8 /* TrafficPlugin */,
+				3E279CCF200E8C290045DD01 /* ClusteringPlugin */,
+				3E279CD7200E8C290045DD01 /* ClusteringPluginTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3E279CCE200E8C290045DD01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E279D2A200E8D0F0045DD01 /* Tree in Resources */,
+				3E279D29200E8D0F0045DD01 /* Mapbox in Resources */,
+				3E279D28200E8D0F0045DD01 /* Algorithm in Resources */,
+				3E279D26200E8D0F0045DD01 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E279CD6200E8C290045DD01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DA8805611ED342F0000CB4A8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -377,6 +566,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		282F1A2DE34E908463AEA7D8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClusteringPlugin/Pods-ClusteringPlugin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		385F226DE08B7A3D2D0E2243 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -411,13 +615,36 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TestApp/Pods-TestApp-frameworks.sh",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework.dSYM",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/Mapbox.framework.dSYM",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestApp/Pods-TestApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		67F81239BE88216396938CC9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ClusteringPlugin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BB7F798EDA73C436A9ACA9DB /* [CP] Check Pods Manifest.lock */ = {
@@ -426,13 +653,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PluginKit-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C305DB6AC717D03F3715B86B /* [CP] Check Pods Manifest.lock */ = {
@@ -441,13 +671,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TrafficPlugin-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E907E8DB9C8EE86B5A37B039 /* [CP] Copy Pods Resources */ = {
@@ -471,13 +704,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestApp-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FB426476901C2F3E973A3522 /* [CP] Copy Pods Resources */ = {
@@ -498,6 +734,23 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3E279CCB200E8C290045DD01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E279D2C200E8D0F0045DD01 /* CKCluster.m in Sources */,
+				3E279D27200E8D0F0045DD01 /* CKClusterManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E279CD4200E8C290045DD01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E279CE0200E8C290045DD01 /* ClusteringPluginTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DA88055E1ED342F0000CB4A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -529,6 +782,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3E279CDB200E8C290045DD01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E279CCF200E8C290045DD01 /* ClusteringPlugin */;
+			targetProxy = 3E279CDA200E8C290045DD01 /* PBXContainerItemProxy */;
+		};
+		3E279CDD200E8C290045DD01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAF50B221ECA15B50044B316 /* TestApp */;
+			targetProxy = 3E279CDC200E8C290045DD01 /* PBXContainerItemProxy */;
+		};
+		3E279CE4200E8C290045DD01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E279CCF200E8C290045DD01 /* ClusteringPlugin */;
+			targetProxy = 3E279CE3200E8C290045DD01 /* PBXContainerItemProxy */;
+		};
 		DA8805921ED3CEC3000CB4A8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DA8805771ED34744000CB4A8 /* PluginKit */;
@@ -556,6 +824,124 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3E279CE8200E8C290045DD01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D86C9C738946999884AB4BC3 /* Pods-ClusteringPlugin.debug.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = GJZR2MEM28;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ClusteringPlugin/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jmkiley.ClusteringPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3E279CE9200E8C290045DD01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58342490ED0F9D375EF99A27 /* Pods-ClusteringPlugin.release.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = GJZR2MEM28;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ClusteringPlugin/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jmkiley.ClusteringPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3E279CEB200E8C290045DD01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 85826LGZGV;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ClusteringPluginTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jmkiley.ClusteringPluginTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestApp.app/TestApp";
+			};
+			name = Debug;
+		};
+		3E279CEC200E8C290045DD01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 85826LGZGV;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ClusteringPluginTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jmkiley.ClusteringPluginTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestApp.app/TestApp";
+			};
+			name = Release;
+		};
 		DA88056C1ED342F0000CB4A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 23038350B97D8048497AB0A7 /* Pods-TrafficPlugin.debug.xcconfig */;
@@ -753,6 +1139,7 @@
 			baseConfigurationReference = B647DD67A710D239904CB3D3 /* Pods-TestApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = GJZR2MEM28;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -760,6 +1147,8 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/TestApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mapbox.PluginTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -770,6 +1159,7 @@
 			baseConfigurationReference = 140228755391DBD91A6B0117 /* Pods-TestApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = GJZR2MEM28;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -777,6 +1167,8 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/TestApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mapbox.PluginTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -785,6 +1177,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3E279CE7200E8C290045DD01 /* Build configuration list for PBXNativeTarget "ClusteringPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E279CE8200E8C290045DD01 /* Debug */,
+				3E279CE9200E8C290045DD01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E279CEA200E8C290045DD01 /* Build configuration list for PBXNativeTarget "ClusteringPluginTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E279CEB200E8C290045DD01 /* Debug */,
+				3E279CEC200E8C290045DD01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DA88056E1ED342F0000CB4A8 /* Build configuration list for PBXNativeTarget "TrafficPlugin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

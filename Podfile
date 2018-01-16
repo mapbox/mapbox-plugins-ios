@@ -24,3 +24,7 @@ target 'TrafficPlugin' do
   # Pods for TrafficPlugin
 
 end
+
+target 'ClusteringPlugin' do
+  pod 'Mapbox-iOS-SDK'
+end
