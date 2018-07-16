@@ -30,7 +30,7 @@ s.social_media_url = "https://twitter.com/mapbox"
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source       = { :git => "https://github.com/mapbox/mapbox-plugins-ios.git", :branch => "traffic-plugin" }
+  s.source       = { :git => "https://github.com/mapbox/mapbox-plugins-ios.git", :branch => "master" }
 
   s.module_name = 'MapboxPlugins'
 
