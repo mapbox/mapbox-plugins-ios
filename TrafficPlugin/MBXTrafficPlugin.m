@@ -1,11 +1,11 @@
 
 #import "MBXTrafficPlugin.h"
 
-static MGLStyleValue *_trafficColor;
+static NSExpression *_trafficColor;
 
 @interface MBXTrafficPlugin ()
 
-@property (nonatomic) MGLVectorSource *source;
+@property (nonatomic) MGLVectorTileSource *source;
 @property (nonatomic) NSString *bundleIdentifier;
 @end
 
@@ -46,30 +46,29 @@ static MGLStyleValue *_trafficColor;
         NSBundle *bundle = [NSBundle bundleForClass:[MBXTrafficPlugin class]];
         _bundleIdentifier = [bundle bundleIdentifier];
         NSString *sourceIdentifier = [NSString stringWithFormat:@"%@-traffic-source", _bundleIdentifier];
-        _source = [[MGLVectorSource alloc] initWithIdentifier:sourceIdentifier configurationURL:[NSURL URLWithString:@"mapbox://mapbox.mapbox-traffic-v1"]];
+        _source = [[MGLVectorTileSource alloc] initWithIdentifier:sourceIdentifier configurationURL:[NSURL URLWithString:@"https://raah.ir/dynamic/traffic.json"]];
         [mapView.style addSource:_source];
     }
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        NSDictionary *stopsDictionary = @{
-                                          @"low" : [MGLStyleValue valueWithRawValue:[UIColor colorWithRed:88.0/255.0
-                                                                                                    green:195.0/255.0
-                                                                                                     blue:35.0/255.0
-                                                                                                    alpha:1]],
-                                          @"moderate" : [MGLStyleValue valueWithRawValue:[UIColor colorWithRed:88.0/255.0
-                                                                                                         green:195.0/255.0
-                                                                                                          blue:35.0/255.0
-                                                                                                         alpha:1]],
-                                          @"heavy" : [MGLStyleValue valueWithRawValue:[UIColor colorWithRed:242.0/255.0
-                                                                                                      green:185.0/255.0
-                                                                                                       blue:15.0/255.0
-                                                                                                      alpha:1]],
-                                          @"severe" : [MGLStyleValue valueWithRawValue:[UIColor colorWithRed:204.0/255.0
-                                                                                                       green:0
-                                                                                                        blue:0
-                                                                                                       alpha:1]]
-                                          };
-        _trafficColor = [MGLStyleValue valueWithInterpolationMode:MGLInterpolationModeCategorical sourceStops:stopsDictionary attributeName:@"congestion" options:@{MGLStyleFunctionOptionDefaultValue : [MGLStyleValue valueWithRawValue:[UIColor greenColor]]}];
+        _trafficColor = [NSExpression expressionWithFormat:@"MGL_MATCH(congestion, 'low', %@, 'moderate', %@, 'heavy', %@, 'severe', %@, %@)",
+                         [UIColor colorWithRed:88.0/255.0
+                                         green:195.0/255.0
+                                          blue:35.0/255.0
+                                         alpha:1],
+                         [UIColor colorWithRed:88.0/255.0
+                                         green:195.0/255.0
+                                          blue:35.0/255.0
+                                         alpha:1],
+                         [UIColor colorWithRed:242.0/255.0
+                                         green:185.0/255.0
+                                          blue:15.0/255.0
+                                         alpha:1],
+                         [UIColor colorWithRed:204.0/255.0
+                                         green:0
+                                          blue:0
+                                         alpha:1],
+                        [UIColor greenColor]];
     });
 }
 
@@ -83,15 +82,14 @@ static MGLStyleValue *_trafficColor;
     motorwayLayer.lineColor = _trafficColor;
     
     NSDictionary *motorwayLineWidthDictionary =  @{
-                                                   @7 : [MGLStyleValue valueWithRawValue:@1],
-                                                   @18 : [MGLStyleValue valueWithRawValue:@24]
+                                                   @7 : @1,
+                                                   @18 : @24
                                                    };
     
-    motorwayLayer.lineWidth = [MGLStyleValue valueWithInterpolationMode: MGLInterpolationModeExponential
-                                                            cameraStops:motorwayLineWidthDictionary
-                                                                options:@{
-                                                                          MGLStyleFunctionOptionDefaultValue : [MGLStyleValue valueWithRawValue:@3],
-                                                                          MGLStyleFunctionOptionInterpolationBase : @1.5}];
+    motorwayLayer.lineWidth = [NSExpression expressionWithFormat:@"mgl_interpolate:withCurveType:parameters:stops:($zoomLevel, 'exponential', 1.5, %@)",
+                               motorwayLineWidthDictionary];
+    
+
     
     return motorwayLayer;
 }
@@ -103,19 +101,17 @@ static MGLStyleValue *_trafficColor;
     primaryLayer.predicate = [NSPredicate predicateWithFormat:@"class IN {'primary', 'secondary', 'tertiary'}"];
     
     NSDictionary *primaryLineStopsDictionary = @{
-                                                 @11 : [MGLStyleValue valueWithRawValue:@1.25],
-                                                 @14 : [MGLStyleValue valueWithRawValue:@2.5],
-                                                 @17 : [MGLStyleValue valueWithRawValue:@5.5],
-                                                 @20 : [MGLStyleValue valueWithRawValue:@15.5]
+                                                 @11 : @1.25,
+                                                 @14 : @2.5,
+                                                 @17 : @5.5,
+                                                 @20 : @15.5
                                                  };
     
     primaryLayer.lineColor = _trafficColor;
-    primaryLayer.lineWidth = [MGLStyleValue valueWithInterpolationMode:MGLInterpolationModeExponential
-                                                           cameraStops:primaryLineStopsDictionary
-                                                               options:@{
-                                                                         MGLStyleFunctionOptionDefaultValue : [MGLStyleValue valueWithRawValue:@3],
-                                                                         MGLStyleFunctionOptionInterpolationBase : @1.5}];
-
+    
+     primaryLayer.lineWidth = [NSExpression expressionWithFormat:@"mgl_interpolate:withCurveType:parameters:stops:($zoomLevel, 'exponential', 1.5, %@)",
+     primaryLineStopsDictionary];
+    
     return primaryLayer;
 }
 
@@ -126,18 +122,18 @@ static MGLStyleValue *_trafficColor;
     streetLayer.predicate = [NSPredicate predicateWithFormat:@"class IN {'street', 'link', 'service'}"];
     
     NSDictionary *streetLineStopsDictionary = @{
-                                                @11 : [MGLStyleValue valueWithRawValue:@1],
-                                                @14 : [MGLStyleValue valueWithRawValue:@2],
-                                                @17 : [MGLStyleValue valueWithRawValue:@4],
-                                                @20 : [MGLStyleValue valueWithRawValue:@13.5]
+                                                @11 : @1,
+                                                @14 : @2,
+                                                @17 : @4,
+                                                @20 : @13.5
                                                 };
     
     streetLayer.lineColor = _trafficColor;
-    streetLayer.lineWidth = [MGLStyleValue valueWithInterpolationMode: MGLInterpolationModeExponential
-                                                          cameraStops:streetLineStopsDictionary
-                                                              options:@{
-                                                                        MGLStyleFunctionOptionDefaultValue : [MGLStyleValue valueWithRawValue:@3],
-                                                                        MGLStyleFunctionOptionInterpolationBase : @1.5}];
+    
+    
+    streetLayer.lineWidth = [NSExpression expressionWithFormat:@"mgl_interpolate:withCurveType:parameters:stops:($zoomLevel, 'exponential', 1.5, %@)",
+     streetLineStopsDictionary];
+
     
     return streetLayer;
 }
