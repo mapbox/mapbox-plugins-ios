@@ -46,7 +46,7 @@ static NSExpression *_trafficColor;
         NSBundle *bundle = [NSBundle bundleForClass:[MBXTrafficPlugin class]];
         _bundleIdentifier = [bundle bundleIdentifier];
         NSString *sourceIdentifier = [NSString stringWithFormat:@"%@-traffic-source", _bundleIdentifier];
-        _source = [[MGLVectorTileSource alloc] initWithIdentifier:sourceIdentifier configurationURL:[NSURL URLWithString:@"https://raah.ir/dynamic/traffic.json"]];
+        _source = [[MGLVectorTileSource alloc] initWithIdentifier:sourceIdentifier configurationURL:[NSURL URLWithString:@"mapbox://mapbox.mapbox-traffic-v1"]];
         [mapView.style addSource:_source];
     }
     static dispatch_once_t onceToken;
