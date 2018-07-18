@@ -36,7 +36,7 @@ s.social_media_url = "https://twitter.com/mapbox"
 
   s.subspec 'PluginKit' do |core|
     core.source_files  = 'PluginKit/*.h'
-    core.dependency 'Mapbox-iOS-SDK', '~> 4.1.0'
+    core.dependency 'Mapbox-iOS-SDK', '~> 4.0.0'
   end
 
   s.subspec 'Traffic' do |traffic|
